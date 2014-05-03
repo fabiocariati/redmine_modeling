@@ -17,8 +17,8 @@
     </data-source>
     <data-source source="LOCAL" name="Rails redmine-2.5.1: production" uuid="6626ce0c-9a5b-4656-a695-cfa2e08f33fe">
       <driver-ref>mysql</driver-ref>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/redmine</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/redmine</jdbc-url>
       <user-name>root</user-name>
       <libraries />
     </data-source>
