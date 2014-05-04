@@ -18,8 +18,9 @@
     <data-source source="LOCAL" name="Rails redmine-2.5.1: production" uuid="6626ce0c-9a5b-4656-a695-cfa2e08f33fe">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://127.0.0.1/redmine</jdbc-url>
-      <user-name>root</user-name>
+      <jdbc-url>jdbc:postgresql://kwfnwoftmsvlxt/d5k4rvmgojp4m</jdbc-url>
+      <user-name>kwfnwoftmsvlxt</user-name>
+      <user-password>dfe3df93df87dfe4dfc7df92df87dfd3dfc4dfdfdffbdfebdfe9dfffdfe0dfc9dfe7dfecdff8dfeddfffdf9adfecdfe4df9fdf98</user-password>
       <libraries />
     </data-source>
   </component>
