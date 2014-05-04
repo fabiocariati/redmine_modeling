@@ -73,10 +73,10 @@ if File.exist?(database_file)
         #  gem "activerecord-jdbcmysql-adapter", :platforms => :jruby
         #end
       when /postgresql/
-        group :development do
-          gem "pg", ">= 0.11.0", :platforms => [:mri, :mingw]
-          gem "activerecord-jdbcpostgresql-adapter", :platforms => :jruby
-        end
+        #group :development do
+        #  gem "pg", ">= 0.11.0", :platforms => [:mri, :mingw]
+        #  gem "activerecord-jdbcpostgresql-adapter", :platforms => :jruby
+        #end
       when /sqlite3/
         #group :development do
         #  gem "sqlite3", :platforms => [:mri, :mingw]
