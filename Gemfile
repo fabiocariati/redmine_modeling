@@ -63,30 +63,30 @@ if File.exist?(database_file)
     adapters.each do |adapter|
       case adapter
       when 'mysql2'
-        group :development do
-          gem "mysql2", "~> 0.3.11", :platforms => [:mri, :mingw]
-          gem "activerecord-jdbcmysql-adapter", :platforms => :jruby
-        end
-      when 'mysql'
-        group :development do
-          gem "mysql", "~> 2.8.1", :platforms => [:mri, :mingw]
-          gem "activerecord-jdbcmysql-adapter", :platforms => :jruby
-        end
-      when /postgresql/
         #group :development do
-        #  gem "pg", ">= 0.11.0", :platforms => [:mri, :mingw]
-        #  gem "activerecord-jdbcpostgresql-adapter", :platforms => :jruby
+        #  gem "mysql2", "~> 0.3.11", :platforms => [:mri, :mingw]
+        #  gem "activerecord-jdbcmysql-adapter", :platforms => :jruby
         #end
+      when 'mysql'
+        #group :development do
+        #  gem "mysql", "~> 2.8.1", :platforms => [:mri, :mingw]
+        #  gem "activerecord-jdbcmysql-adapter", :platforms => :jruby
+        #end
+      when /postgresql/
+        group :development do
+          gem "pg", ">= 0.11.0", :platforms => [:mri, :mingw]
+          gem "activerecord-jdbcpostgresql-adapter", :platforms => :jruby
+        end
       when /sqlite3/
-        group :development do
-          gem "sqlite3", :platforms => [:mri, :mingw]
-          gem "activerecord-jdbcsqlite3-adapter", :platforms => :jruby
-        end
+        #group :development do
+        #  gem "sqlite3", :platforms => [:mri, :mingw]
+        #  gem "activerecord-jdbcsqlite3-adapter", :platforms => :jruby
+        #end
       when /sqlserver/
-        group :development do
-          gem "tiny_tds", "~> 0.5.1", :platforms => [:mri, :mingw]
-          gem "activerecord-sqlserver-adapter", :platforms => [:mri, :mingw]
-        end
+        #group :development do
+        #  gem "tiny_tds", "~> 0.5.1", :platforms => [:mri, :mingw]
+        #  gem "activerecord-sqlserver-adapter", :platforms => [:mri, :mingw]
+        #end
       else
         warn("Unknown database adapter `#{adapter}` found in config/database.yml, use Gemfile.local to load your own database gems")
       end
