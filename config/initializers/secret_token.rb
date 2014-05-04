@@ -1,0 +1,1 @@
+RedmineApp::Application.config.secret_token = '85ec9b39ee07ded753c0b5f10815bdb62971b2abb458f5d1d1d3dd41be3c5cd429835768b5ecb30fe76dee9775c433a2b52af964dfe4457d45635790e6ce01d0'
