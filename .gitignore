@@ -15,8 +15,6 @@
 /lib/redmine/scm/adapters/mercurial/redminehelper.pyo
 /log/*.log*
 /log/mongrel_debug
-/plugins/*
-!/plugins/README
 /public/dispatch.*
 /public/themes/*
 !/public/themes/alternate
