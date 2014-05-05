@@ -57,7 +57,7 @@ templates = {
                                                             '<a href="#graph/<%= id %>/<%= graph.get("id") %>"><%= graph.get("name") %></a>' +
                                                         '</div>' +
                                                     '</td>' +
-                                                    '<td style="float: right"><%= dia.template("Utils", "basic_tools", {}) %></td>' +
+                                                    '<td style="float: right"><%= dia.template("Utils", "basic_tools", { editUrl: "edit_diagram/" + graph.get("id")}) %></td>' +
                                                 '</tr>' +
                                             '</table>' +
                                         '</div>' +
@@ -67,7 +67,7 @@ templates = {
                                     '</li>' +
                                 '<% }); %>' +
                                 '<br />' +
-                                '<li style="float: right;"><a href="#new_diagram"><b>New Diagram</b> <%= dia.getIcon("fa-plus") %></a></li>' +
+                                '<li style="float: right;"><a class="dialog-link " href="#new_diagram"><b>New Diagram</b> <%= dia.getIcon("fa-plus") %></a></li>' +
                             '</ul>' +
                         '</li>' +
                     '</ul>' +
@@ -86,13 +86,13 @@ templates = {
                                     '<a href="#edit/<%= specification.get("id") %>"><%= specification.get("name") %></a>' +
                                 '</div>' +
                             '</td>' +
-                            '<td style="float: right"><%= dia.template("Utils", "basic_tools", {}) %></td>' +
+                            '<td style="float: right"><%= dia.template("Utils", "basic_tools", { editUrl: "edit_specification/" + specification.get("id")}) %></td>' +
                         '</tr>' +
                     '<% }); %>' +
                 '</table>' +
             '</div>' 
         ),
-        new: _.template(
+        edit: _.template(
             '<div class="custom-modal-dialog" id="save_specification">' +
                 '<a href="#" style="float: right;">X</a>' +
                 '<h3 style="text-align: center;">New Specification</h3>' +
@@ -101,13 +101,13 @@ templates = {
                         '<option value="ObjectOriented">Object Oriented</option>' +
                     '</select>' +
                 '</p>' +
-                '<p>Name: <input name="name" style="width: 300px; float: right;" /></p>' +
+                '<p>Name: <input name="name" style="width: 300px; float: right;" value="<%= specification.name %>" /></p>' +
                 '<div style="float: right">' +
                     '<a href="#" id="save_specification_buttom" class="btn btn-primary">Save</a>' +
                 '</div>' +
             '</div>' 
         ),
-        new_diagram: _.template(
+        edit_diagram: _.template(
             '<div class="custom-modal-dialog" id="save_diagram">' +
                 '<a href="#" style="float: right;">X</a>' +
                 '<h3 style="text-align: center;">New Diagram</h3>' +
@@ -116,7 +116,7 @@ templates = {
                         '<option value="Class">Class</option>' +
                     '</select>' +
                 '</p>' +
-                '<p>Name: <input name="name" style="width: 300px; float: right;" /></p>' +
+                '<p>Name: <input name="name" style="width: 300px; float: right;" value="<%= graph.name %>" /></p>' +
                 '<div style="float: right">' +
                     '<a href="#" id="save_diagram_buttom" class="btn btn-primary">Save</a>' +
                 '</div>' +
@@ -143,7 +143,7 @@ templates = {
     },
     Utils: {
         basic_tools: _.template(
-            '<a class="btn btn-default btn-sm"><%= dia.getIcon("fa-wrench") %></a>' +
+            '<a class="btn btn-default btn-sm dialog-link" href="#<%= editUrl %>"><%= dia.getIcon("fa-wrench") %></a>' +
             '<a style="margin-left: 2px;" class="btn btn-danger btn-sm"><%= dia.getIcon("fa-trash-o fa-inverse") %></a>' 
         )
     },
@@ -228,8 +228,8 @@ templates = {
             '<ul id="menu-bar">' +
                 '<li><a href="#">Specification</a>' +
                     '<ul>' +
-                        '<li class="sub1"><a href="#new_specification">New</a></li>' +
-                        '<li class="sub1"><a href="#show_specifications">Load</a></li>' +
+                        '<li class="sub1"><a class="dialog-link" href="#new_specification">New</a></li>' +
+                        '<li class="sub1"><a class="dialog-link" href="#show_specifications">Load</a></li>' +
                     '</ul>' +
                 '</li>' +
                 '<li><a href="#">Help</a>' +
@@ -239,9 +239,7 @@ templates = {
                     '</ul>' +
                 '</li>' +
             '</ul>' +
-            '<div class="custom-modal" id="show_specifications" aria-hidden="true"></div>' +
-            '<div class="custom-modal" id="new_specification" aria-hidden="true"></div>' +
-            '<div class="custom-modal" id="new_diagram" aria-hidden="true"></div>' 
+            '<div class="custom-modal" aria-hidden="true"></div>' 
         )
     },
     Lifeline: {

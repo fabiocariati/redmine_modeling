@@ -6,6 +6,8 @@ dia.Editor = Backbone.View.extend({
 
     render: function() {
         this.$el.append(dia.template("Editor", "body", {}));
+
+        dia.setDialogEventLink();
     },
 
     showSpecification: function(id, graph_id) {
@@ -49,12 +51,15 @@ dia.Editor = Backbone.View.extend({
 
     showSpecificationsList: function() {
         var self = this;
+        $(".custom-modal").attr("id", "show_specifications")
 
-        $('#show_specifications').html(dia.template('Specification', 'show', {
+        $(".custom-modal").html(dia.template('Specification', 'show', {
             specifications: this.specifications.models
         }))
 
-        $('#show_specifications').find(".btn-danger").click(function(){
+        dia.setDialogEventLink();
+
+        $(".custom-modal").find(".btn-danger").click(function(){
             var id = $(this).closest("tr").attr("specification");
             self.specifications.get(id).destroy({
                 success: function() {
@@ -69,7 +74,13 @@ dia.Editor = Backbone.View.extend({
 
     showNewSpecificationDialog: function(app) {
         var self = this;
-        $('#new_specification').html(dia.template('Specification', 'new', {}))
+        $(".custom-modal").attr("id", "new_specification")
+
+        $(".custom-modal").html(dia.template('Specification', 'edit',
+            {
+                specification: { name: "", type: "" }
+            }
+        ))
         $("#save_specification_buttom").click(function(evt){
             var $div = $("#save_specification");
 
@@ -97,10 +108,52 @@ dia.Editor = Backbone.View.extend({
         })
     },
 
+    showEditSpecificationDialog: function(app, id) {
+        var self = this;
+        $(".custom-modal").attr("id", "edit_specification/" + id)
+
+        var specification = this.specifications.get(id);
+
+        $(".custom-modal").html(dia.template('Specification', 'edit',
+            {
+                specification:
+                {
+                    name: specification.get("name"),
+                    type: specification.get("type")
+                }
+            }
+        ))
+
+        $("#save_specification_buttom").click(function(evt){
+            var $div = $("#save_specification");
+
+            var type = $div.find("select[name='type']")[0].value;
+            var name = $div.find("input[name='name']")[0].value;
+
+            specification.set("type", type);
+            specification.set("name", name);
+
+            specification.save(null, {
+                success: function (model, resp) {
+                    model.id = resp.id; //Todo: mudar isso
+                    self.updateViewForSpecification(model);
+                    model._is_loaded = true;
+                    app.navigate("edit/" + resp.id, { trigger: true, replace: true });
+                },
+                error: function(model, resp) {
+                    log(resp.responseText)
+                }
+            });
+        })
+    },
+
     showNewDiagramDialog: function() {
         var self = this;
-        $('#new_diagram').html(dia.template('Specification', 'new_diagram', {
-            specifications: this.specifications.models
+        $(".custom-modal").attr("id", "new_diagram")
+
+        $(".custom-modal").html(dia.template('Specification', 'edit_diagram', {
+            specifications: this.specifications.models,
+            graph: { name: "", type: "" }
         }))
 
         $("#save_diagram_buttom").click(function(evt){
@@ -114,6 +167,39 @@ dia.Editor = Backbone.View.extend({
                 name: name,
                 specification_id: self.app.currentSpecification.get("id")
             })
+
+            graph.save(null, {
+                success: function (model, resp) {
+                    self.app.navigate("graph/" + model.get("specification_id") + "/" + resp.id, { trigger: true, replace: true });
+                    self.app.currentSpecification.addGraph(graph);
+                },
+                error: function(model, resp) {
+                    log(resp.responseText)
+                }
+            });
+        })
+    },
+
+    showEditDiagramDialog: function(id) {
+        var self = this;
+
+        var graph = self.app.currentSpecification.get("graphs").get(id);
+
+        $(".custom-modal").attr("id", "edit_diagram/" + id)
+
+        $(".custom-modal").html(dia.template('Specification', 'edit_diagram', {
+            specifications: this.specifications.models,
+            graph: { name: graph.get("name"), type: graph.get("type") }
+        }))
+
+        $("#save_diagram_buttom").click(function(evt){
+            var $div = $("#save_diagram");
+
+            var type = $div.find("select[name='type']")[0].value;
+            var name = $div.find("input[name='name']")[0].value;
+
+            graph.set("type", type);
+            graph.set("name", name);
 
             graph.save(null, {
                 success: function (model, resp) {
@@ -146,6 +232,20 @@ dia.Editor = Backbone.View.extend({
         })
 
         view.render();
+
+        this.changeTo('specification', 'body');
+    },
+
+    updateViewForSpecification: function(specification) {
+        this.$el.find("#specification_" + specification.get('id')).html("");
+
+        var view = new dia.SpecificationView({
+            el: "#specification_" + specification.get("id"),
+            model: specification
+        })
+
+        view.render();
+        view.updateSideBar();
 
         this.changeTo('specification', 'body');
     }

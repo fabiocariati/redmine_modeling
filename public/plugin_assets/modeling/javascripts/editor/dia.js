@@ -61,6 +61,14 @@ dia = {
         return templates[element][item](attributes)
     },
 
+    setDialogEventLink: function() {
+        $("a.dialog-link").click(function() {
+            var id = this.href.split("#")[1]
+            $(".custom-modal").attr("id", id)
+            return true;
+        });
+    },
+
     getIcon: function(name) {
         return _.template('<i class="fa <%= name %>"></i>')({name: name})
     }

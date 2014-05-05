@@ -8,7 +8,9 @@ var AppRoutes = Backbone.Router.extend({
     routes: {
         'show_specifications': "showSpecifications",
         'new_specification': "newSpecification",
-        'new_diagram': "new_diagram",
+        'edit_specification/:id': "editSpecification",
+        'new_diagram': "newDiagram",
+        'edit_diagram/:id': "editDiagram",
         'edit/:id': "edit",
         'graph/:specification/:id': "showDiagram",
         'examples': "editExamples"
@@ -22,8 +24,16 @@ var AppRoutes = Backbone.Router.extend({
         this.editor.showNewSpecificationDialog(this);
     },
 
-    new_diagram: function() {
+    editSpecification: function(id) {
+        this.editor.showEditSpecificationDialog(this, id);
+    },
+
+    newDiagram: function() {
         this.editor.showNewDiagramDialog();
+    },
+
+    editDiagram: function(id) {
+        this.editor.showEditDiagramDialog(id);
     },
 
     edit: function(id) {

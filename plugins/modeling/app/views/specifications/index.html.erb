@@ -5,6 +5,7 @@
     <script src="plugin_assets/modeling/javascripts/lib/backbone.js"></script>
     <script src="plugin_assets/modeling/javascripts/lib/backbone-nested.min.js"></script>
     <script src="plugin_assets/modeling/javascripts/lib/Backbone.Undo.js"></script>
+    <script src="plugin_assets/modeling/javascripts/lib/backbone.routefilter.js"></script>
 
     <script src="plugin_assets/modeling/javascripts/src/core.js"></script>
     <script src="plugin_assets/modeling/javascripts/src/vectorizer.js"></script>
@@ -99,6 +100,7 @@
 
 <script>
     $(function(){
+
         dia.start();
 
         var specs = <%= @specifications.to_json.html_safe -%>;

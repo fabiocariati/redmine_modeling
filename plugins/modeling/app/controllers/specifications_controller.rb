@@ -13,9 +13,24 @@ class SpecificationsController < ApplicationController
     end
   end
 
-  def create
-    logger.info params
+  def update
+    params.delete(:graphs)
+    params.delete(:authenticity_token)
+    params.delete(:action)
+    params.delete(:controller)
+    params.delete(:concept_models_types)
 
+    @specification = Specification.find(params[:id])
+    @specification.attributes = params
+    @specification.save
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: {id: @specification.id} }
+    end
+  end
+
+  def create
     params.delete(:graphs)
     params.delete(:authenticity_token)
     params.delete(:action)

@@ -16,6 +16,7 @@ dia.SpecificationView = Backbone.View.extend({
             name: this.model.get('name'),
             graphs: this.options.graphs
         }))
+        dia.setDialogEventLink();
         return this;
     },
 
@@ -60,6 +61,8 @@ dia.SpecificationView = Backbone.View.extend({
                 }
             })
         })
+
+        dia.setDialogEventLink();
     },
 
     addPaper: function(graph) {

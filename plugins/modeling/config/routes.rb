@@ -3,6 +3,7 @@
 
 get 'specifications', :to => 'specifications#index'
 post 'specification', :to => 'specifications#create'
+put 'specification/:id', :to => 'specifications#update'
 delete 'specification/:id', :to => 'specifications#destroy'
 
 post 'concept_model', :to => 'concept_models#create'
