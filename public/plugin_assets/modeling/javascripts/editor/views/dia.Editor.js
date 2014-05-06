@@ -133,6 +133,7 @@ dia.Editor = Backbone.View.extend({
             specification.set("type", type);
             specification.set("name", name);
 
+            // Update
             specification.save(null, {
                 success: function (model, resp) {
                     model.id = resp.id; //Todo: mudar isso
@@ -201,10 +202,10 @@ dia.Editor = Backbone.View.extend({
             graph.set("type", type);
             graph.set("name", name);
 
+            // Update
             graph.save(null, {
                 success: function (model, resp) {
                     self.app.navigate("graph/" + model.get("specification_id") + "/" + resp.id, { trigger: true, replace: true });
-                    self.app.currentSpecification.addGraph(graph);
                 },
                 error: function(model, resp) {
                     log(resp.responseText)

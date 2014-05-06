@@ -15,7 +15,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/redmine-2.5.1@Development__redmine_2_5_1.coverage" NAME="Development: redmine-2.5.1 Coverage Results" MODIFIED="1399261342261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="redmine-2.5.1" />
+    <SUITE FILE_PATH="coverage/redmine-2.5.1@Development__redmine_2_5_1.coverage" NAME="Development: redmine-2.5.1 Coverage Results" MODIFIED="1399262069956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="redmine-2.5.1" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -32,7 +32,7 @@
       <file leaf-file-name="dia.AppRoutes.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/routes/dia.AppRoutes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="6" selection-start="715" selection-end="715" vertical-scroll-proportion="-14.4" vertical-offset="0" max-vertical-offset="936">
+            <state line="24" column="6" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="936">
               <folding />
             </state>
           </provider>
@@ -41,7 +41,34 @@
       <file leaf-file-name="dia.Editor.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.Editor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="0" selection-start="6564" selection-end="6564" vertical-scroll-proportion="-21.6" vertical-offset="2664" max-vertical-offset="4626">
+            <state line="186" column="50" selection-start="6637" selection-end="6637" vertical-scroll-proportion="0.0" vertical-offset="3348" max-vertical-offset="4644">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="433" selection-end="887" vertical-scroll-proportion="0.24502617" vertical-offset="0" max-vertical-offset="1044">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="secret_token.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/initializers/secret_token.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="175" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="0" selection-start="337" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2214">
               <folding />
             </state>
           </provider>
@@ -50,37 +77,16 @@
       <file leaf-file-name="specification.jst.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/templates/specification.jst.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="100" selection-start="4411" selection-end="4411" vertical-scroll-proportion="-15.518518" vertical-offset="1183" max-vertical-offset="1872">
-              <folding>
-                <element signature="n#style#0;n#table#0;n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#tr#0;n#table#0;n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#td#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#p#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#p#1;n#div#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#p#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#p#1;n#div#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-              </folding>
+            <state line="89" column="100" selection-start="4411" selection-end="4411" vertical-scroll-proportion="0.0" vertical-offset="1183" max-vertical-offset="1872">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/modeling/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="54" selection-start="228" selection-end="228" vertical-scroll-proportion="0.14285715" vertical-offset="0" max-vertical-offset="630">
+            <state line="13" column="0" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="342">
               <folding />
             </state>
           </provider>
@@ -98,7 +104,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/modeling/app/views/specifications/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="0" selection-start="6347" selection-end="6347" vertical-scroll-proportion="-10.666667" vertical-offset="1548" max-vertical-offset="2484">
+            <state line="102" column="0" selection-start="6347" selection-end="6347" vertical-scroll-proportion="0.0" vertical-offset="1548" max-vertical-offset="2484">
               <folding />
             </state>
           </provider>
@@ -107,7 +113,7 @@
       <file leaf-file-name="utils.jst.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/templates/utils.jst.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="52" selection-start="123" selection-end="134" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="198">
+            <state line="2" column="52" selection-start="123" selection-end="134" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="198">
               <folding />
             </state>
           </provider>
@@ -140,12 +146,9 @@
         <option value="$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/class/uml.ClassDiagramToolbarView.js" />
         <option value="$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.ElementView.js" />
         <option value="$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/models/dia.Specification.js" />
-        <option value="$PROJECT_DIR$/plugins/modeling/app/controllers/concept_models_controller.rb" />
         <option value="$PROJECT_DIR$/plugins/modeling/app/models/concept_model.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
-        <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/routes/dia.AppRoutes.js" />
         <option value="$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/templates/utils.jst.html" />
         <option value="$PROJECT_DIR$/plugins/modeling/app/views/specifications/index.html.erb" />
@@ -154,8 +157,11 @@
         <option value="$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.SpecificationView.js" />
         <option value="$PROJECT_DIR$/plugins/modeling/config/routes.rb" />
         <option value="$PROJECT_DIR$/plugins/modeling/app/controllers/specifications_controller.rb" />
-        <option value="$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.Editor.js" />
         <option value="$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/templates/specification.jst.html" />
+        <option value="$PROJECT_DIR$/plugins/modeling/app/controllers/concept_models_controller.rb" />
+        <option value="$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.Editor.js" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
       </list>
     </option>
   </component>
@@ -198,8 +204,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -228,46 +232,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -282,192 +246,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="editor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="editor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="editor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="initializers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -640,23 +430,23 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22695418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34653464" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34653464" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
@@ -681,9 +471,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/models/dia.Specification.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1008">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1008" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.Editor.js">
@@ -695,30 +483,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/app/controllers/concept_models_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="34" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.0" vertical-offset="862" max-vertical-offset="2304">
-          <folding />
-        </state>
+        <state line="60" column="34" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.0" vertical-offset="862" max-vertical-offset="2304" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/app/models/class_diagram.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="71" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="324">
-          <folding />
-        </state>
+        <state line="6" column="71" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="324" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/app/models/link.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="23" selection-start="233" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="378">
-          <folding />
-        </state>
+        <state line="9" column="23" selection-start="233" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="378" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/models/dia.Specification.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1008">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1008" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.Editor.js">
@@ -760,9 +540,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="9" selection-start="5533" selection-end="5538" vertical-scroll-proportion="0.33225283" vertical-offset="1361" max-vertical-offset="6516">
-          <folding />
-        </state>
+        <state line="87" column="9" selection-start="5533" selection-end="5538" vertical-scroll-proportion="0.33225283" vertical-offset="1361" max-vertical-offset="6516" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/rails">
@@ -783,11 +561,6 @@
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/stylesheets/font-awesome.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="150" selection-start="202" selection-end="312" vertical-scroll-proportion="0.08372093" vertical-offset="0" max-vertical-offset="645" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/secret_token.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="175" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="634" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/lib/backbone.js">
@@ -812,149 +585,96 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/app/models/concept.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="37" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
-          <folding />
-        </state>
+        <state line="20" column="37" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/models/dia.Element.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.749556" vertical-offset="985" max-vertical-offset="1548">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.749556" vertical-offset="985" max-vertical-offset="1548" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/app/models/class_concept.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="5" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
-          <folding />
-        </state>
+        <state line="17" column="5" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.ToolbarView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1242" max-vertical-offset="1962">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1242" max-vertical-offset="1962" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/class/uml.ClassDiagramToolbarView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="574" selection-end="574" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="720">
-          <folding />
-        </state>
+        <state line="15" column="0" selection-start="574" selection-end="574" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="720" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/src/joint.dia.element.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="534" column="4" selection-start="18415" selection-end="18415" vertical-scroll-proportion="0.33333334" vertical-offset="9384" max-vertical-offset="10134">
-          <folding />
-        </state>
+        <state line="534" column="4" selection-start="18415" selection-end="18415" vertical-scroll-proportion="0.33333334" vertical-offset="9384" max-vertical-offset="10134" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/src/joint.dia.cell.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="500" column="11" selection-start="15592" selection-end="15599" vertical-scroll-proportion="-5.5400343" vertical-offset="12234" max-vertical-offset="13104">
-          <folding />
-        </state>
+        <state line="500" column="11" selection-start="15592" selection-end="15599" vertical-scroll-proportion="-5.5400343" vertical-offset="12234" max-vertical-offset="13104" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.ElementView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="253" column="0" selection-start="8405" selection-end="8541" vertical-scroll-proportion="0.0" vertical-offset="4356" max-vertical-offset="5040">
-          <folding />
-        </state>
+        <state line="253" column="0" selection-start="8405" selection-end="8541" vertical-scroll-proportion="0.0" vertical-offset="4356" max-vertical-offset="5040" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/app/models/class_diagram.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="19" selection-start="425" selection-end="438" vertical-scroll-proportion="0.37142858" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
+        <state line="13" column="19" selection-start="425" selection-end="438" vertical-scroll-proportion="0.37142858" vertical-offset="0" max-vertical-offset="630" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/src/joint.dia.graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="0" selection-start="3434" selection-end="3512" vertical-scroll-proportion="0.028571429" vertical-offset="2322" max-vertical-offset="5310">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/modeling/app/controllers/concept_models_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="1620">
-          <folding />
-        </state>
+        <state line="131" column="0" selection-start="3434" selection-end="3512" vertical-scroll-proportion="0.028571429" vertical-offset="2322" max-vertical-offset="5310" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="48" selection-start="2846" selection-end="2846" vertical-scroll-proportion="-0.56" vertical-offset="1866" max-vertical-offset="2466">
-          <folding />
-        </state>
+        <state line="85" column="48" selection-start="2846" selection-end="2846" vertical-scroll-proportion="-0.56" vertical-offset="1866" max-vertical-offset="2466" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/app/models/concept_model.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="12" selection-start="773" selection-end="773" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1386">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="31" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1044">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="2095" selection-end="2232" vertical-scroll-proportion="0.36" vertical-offset="1080" max-vertical-offset="2214">
-          <folding />
-        </state>
+        <state line="36" column="12" selection-start="773" selection-end="773" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1386" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="10" selection-start="341" selection-end="341" vertical-scroll-proportion="0.33333334" vertical-offset="106" max-vertical-offset="738">
-          <folding />
-        </state>
+        <state line="17" column="10" selection-start="341" selection-end="341" vertical-scroll-proportion="0.33333334" vertical-offset="106" max-vertical-offset="738" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/models/dia.Specification.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="6" selection-start="961" selection-end="961" vertical-scroll-proportion="1.0571429" vertical-offset="0" max-vertical-offset="1008">
-          <folding />
-        </state>
+        <state line="37" column="6" selection-start="961" selection-end="961" vertical-scroll-proportion="1.0571429" vertical-offset="0" max-vertical-offset="1008" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/app/models/link.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="291" selection-end="291" vertical-scroll-proportion="0.31428573" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
+        <state line="11" column="13" selection-start="291" selection-end="291" vertical-scroll-proportion="0.31428573" vertical-offset="0" max-vertical-offset="630" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/templates/utils.jst.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="52" selection-start="123" selection-end="134" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="198">
+        <state line="2" column="52" selection-start="123" selection-end="134" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="198">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/app/views/specifications/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="0" selection-start="6347" selection-end="6347" vertical-scroll-proportion="-10.666667" vertical-offset="1548" max-vertical-offset="2484">
+        <state line="102" column="0" selection-start="6347" selection-end="6347" vertical-scroll-proportion="0.0" vertical-offset="1548" max-vertical-offset="2484">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/app/controllers/specifications_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="39" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="1134">
-          <folding />
-        </state>
+        <state line="20" column="39" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="1134" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/templates/editor.jst.html">
@@ -966,63 +686,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/dia.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="11" selection-start="2461" selection-end="2461" vertical-scroll-proportion="0.47619048" vertical-offset="924" max-vertical-offset="1566">
+        <state line="68" column="11" selection-start="2461" selection-end="2461" vertical-scroll-proportion="0.47619048" vertical-offset="924" max-vertical-offset="1566" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/templates/specification.jst.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="100" selection-start="4411" selection-end="4411" vertical-scroll-proportion="0.0" vertical-offset="1183" max-vertical-offset="1872">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/modeling/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/modeling/app/controllers/concept_models_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="51" selection-start="886" selection-end="886" vertical-scroll-proportion="0.36190477" vertical-offset="438" max-vertical-offset="1638" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/routes/dia.AppRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="6" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="936">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.SpecificationView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="33" selection-start="606" selection-end="606" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1692">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/routes/dia.AppRoutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="6" selection-start="715" selection-end="715" vertical-scroll-proportion="-14.4" vertical-offset="0" max-vertical-offset="936">
+        <state line="18" column="33" selection-start="606" selection-end="606" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="1692">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.Editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="0" selection-start="6564" selection-end="6564" vertical-scroll-proportion="-21.6" vertical-offset="2664" max-vertical-offset="4626">
+        <state line="186" column="50" selection-start="6637" selection-end="6637" vertical-scroll-proportion="0.0" vertical-offset="3348" max-vertical-offset="4644">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/templates/specification.jst.html">
+    <entry file="file://$PROJECT_DIR$/config/initializers/secret_token.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="100" selection-start="4411" selection-end="4411" vertical-scroll-proportion="-15.518518" vertical-offset="1183" max-vertical-offset="1872">
-          <folding>
-            <element signature="n#style#0;n#table#0;n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#0;n#table#0;n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#p#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#p#1;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#p#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#p#1;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-          </folding>
+        <state line="0" column="175" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="967">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/modeling/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="54" selection-start="228" selection-end="228" vertical-scroll-proportion="0.14285715" vertical-offset="0" max-vertical-offset="630">
+        <state line="16" column="0" selection-start="337" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2214">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="433" selection-end="887" vertical-scroll-proportion="0.24502617" vertical-offset="0" max-vertical-offset="1044">
           <folding />
         </state>
       </provider>

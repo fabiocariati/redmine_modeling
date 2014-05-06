@@ -41,6 +41,7 @@ class ConceptModelsController < ApplicationController
     params.delete(:cells)
 
     @concept_model.attributes = params[:graph]
+    @concept_model.name = params[:name] unless params[:name].nil?
     @concept_model.save
 
     @concept_model.remove_deleted_cells(cells)
