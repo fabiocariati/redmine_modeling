@@ -4,7 +4,7 @@ class SpecificationsController < ApplicationController
   def index
     #Dir.mkdir 'log/test'
     #out_file = File.new("log/test/out.txt", "w")
-    out_file = File.new("log/out.txt", "w")
+    out_file = File.new("#{Rails.root}/log/out.txt", "w")
     @project = Project.find(params[:project_id])
     @specifications = Specification.where(project_id: @project.id)
 

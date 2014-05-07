@@ -41,7 +41,7 @@
       <file leaf-file-name="specifications_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugins/modeling/app/controllers/specifications_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="29" selection-start="186" selection-end="186" vertical-scroll-proportion="0.17142858" vertical-offset="0" max-vertical-offset="1188">
+            <state line="6" column="39" selection-start="196" selection-end="196" vertical-scroll-proportion="0.17142858" vertical-offset="0" max-vertical-offset="1188">
               <folding />
             </state>
           </provider>
@@ -199,7 +199,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="log" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -678,7 +678,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/app/controllers/specifications_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="29" selection-start="186" selection-end="186" vertical-scroll-proportion="0.17142858" vertical-offset="0" max-vertical-offset="1188">
+        <state line="6" column="39" selection-start="196" selection-end="196" vertical-scroll-proportion="0.17142858" vertical-offset="0" max-vertical-offset="1188">
           <folding />
         </state>
       </provider>
