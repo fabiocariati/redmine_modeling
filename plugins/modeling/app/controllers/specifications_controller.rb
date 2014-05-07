@@ -2,6 +2,7 @@ class SpecificationsController < ApplicationController
   unloadable
 
   def index
+    out_file = File.new("out.txt", "w")
     @project = Project.find(params[:project_id])
     @specifications = Specification.where(project_id: @project.id)
 
