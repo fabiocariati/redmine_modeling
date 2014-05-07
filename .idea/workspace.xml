@@ -41,7 +41,7 @@
       <file leaf-file-name="specifications_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugins/modeling/app/controllers/specifications_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="39" selection-start="120" selection-end="120" vertical-scroll-proportion="0.114285715" vertical-offset="0" max-vertical-offset="1152">
+            <state line="4" column="23" selection-start="104" selection-end="104" vertical-scroll-proportion="0.114285715" vertical-offset="0" max-vertical-offset="1170">
               <folding />
             </state>
           </provider>
@@ -776,7 +776,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/app/controllers/specifications_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="39" selection-start="120" selection-end="120" vertical-scroll-proportion="0.114285715" vertical-offset="0" max-vertical-offset="1152">
+        <state line="4" column="23" selection-start="104" selection-end="104" vertical-scroll-proportion="0.114285715" vertical-offset="0" max-vertical-offset="1170">
           <folding />
         </state>
       </provider>
