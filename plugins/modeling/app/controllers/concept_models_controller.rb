@@ -22,6 +22,8 @@ class ConceptModelsController < ApplicationController
     params.delete(:action)
     params.delete(:controller)
 
+    logger.info "------------------------------------"
+    logger.info params[:type]
     model = (params[:type] + 'Diagram').constantize
 
     params.delete(:type)

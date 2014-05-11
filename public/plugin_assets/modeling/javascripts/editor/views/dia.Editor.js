@@ -30,7 +30,7 @@ dia.Editor = Backbone.View.extend({
                             _.each(cells, function(c){
                                 c.id = c.id+"";
                                 var types = c.type.split("."),
-                                    module = types[0], entity = types[1];
+                                    module = types[0], entity = types[1];Class
                                 graph.addCell(new window[module][entity](c)); //Todo: Tirar uml.Class e deixar genérico
                             })
                         })
@@ -78,18 +78,18 @@ dia.Editor = Backbone.View.extend({
 
         $(".custom-modal").html(dia.template('Specification', 'edit',
             {
-                specification: { name: "", type: "" }
+                type: "New",
+                specification: { name: "", type: "", repository: "", repository_user: "" }
             }
         ))
         $("#save_specification_buttom").click(function(evt){
             var $div = $("#save_specification");
 
-            var type = $div.find("select[name='type']")[0].value;
-            var name = $div.find("input[name='name']")[0].value;
-
             var specification = new dia.Specification({
-                type: type,
-                name: name,
+                type: $div.find("select[name='type']")[0].value,
+                name: $div.find("input[name='name']")[0].value,
+                repository: $div.find("input[name='repository']")[0].value,
+                repository_user: $div.find("input[name='repository_user']")[0].value,
                 project_id: 1
             })
 
@@ -116,8 +116,11 @@ dia.Editor = Backbone.View.extend({
 
         $(".custom-modal").html(dia.template('Specification', 'edit',
             {
+                type: "Edit",
                 specification:
                 {
+                    repository: specification.get("repository"),
+                    repository_user: specification.get("repository_user"),
                     name: specification.get("name"),
                     type: specification.get("type")
                 }
@@ -127,11 +130,10 @@ dia.Editor = Backbone.View.extend({
         $("#save_specification_buttom").click(function(evt){
             var $div = $("#save_specification");
 
-            var type = $div.find("select[name='type']")[0].value;
-            var name = $div.find("input[name='name']")[0].value;
-
-            specification.set("type", type);
-            specification.set("name", name);
+            specification.set("type", $div.find("select[name='type']")[0].value);
+            specification.set("name", $div.find("input[name='name']")[0].value);
+            specification.set("repository", $div.find("input[name='repository']")[0].value);
+            specification.set("repository_user", $div.find("input[name='repository_user']")[0].value);
 
             // Update
             specification.save(null, {
@@ -151,10 +153,12 @@ dia.Editor = Backbone.View.extend({
     showNewDiagramDialog: function() {
         var self = this;
         $(".custom-modal").attr("id", "new_diagram")
-
         $(".custom-modal").html(dia.template('Specification', 'edit_diagram', {
             specifications: this.specifications.models,
-            graph: { name: "", type: "" }
+            graph: { name: "", type: "" },
+            types: self.app.currentSpecification.get("concept_types"),
+            repository_types: self.app.currentSpecification.get("repository_types"),
+            repository_path: ""
         }))
 
         $("#save_diagram_buttom").click(function(evt){

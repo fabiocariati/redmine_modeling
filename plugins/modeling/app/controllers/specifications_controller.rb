@@ -2,13 +2,10 @@ class SpecificationsController < ApplicationController
   unloadable
 
   def index
-    #Dir.mkdir 'log/test'
-    #out_file = File.new("log/test/out.txt", "w")
-    out_file = File.new("#{Rails.root}/log/out.txt", "w")
     @project = Project.find(params[:project_id])
     @specifications = Specification.where(project_id: @project.id)
 
-    @specifications = @specifications.map{|s| s.attributes.merge({concept_models_types: s.concept_models_types, })}
+    @specifications = @specifications.map{|s| s.attributes.merge({concept_types: s.concept_types, }).merge({repository_types: s.repository_types, })}
 
     respond_to do |format|
       format.html # index.html.erb
@@ -21,7 +18,7 @@ class SpecificationsController < ApplicationController
     params.delete(:authenticity_token)
     params.delete(:action)
     params.delete(:controller)
-    params.delete(:concept_models_types)
+    params.delete(:concept_types)
 
     @specification = Specification.find(params[:id])
     @specification.attributes = params
@@ -40,6 +37,11 @@ class SpecificationsController < ApplicationController
     params.delete(:controller)
 
     @specification = Specification.create(params)
+
+    unless params[:repository].empty?
+      name = 'plugins/modeling/repositories/repo_' + @specification.id.to_s
+      Git.clone(params[:repository], name)
+    end
 
     respond_to do |format|
       format.html # index.html.erb

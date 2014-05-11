@@ -95,13 +95,15 @@ templates = {
         edit: _.template(
             '<div class="custom-modal-dialog" id="save_specification">' +
                 '<a href="#" style="float: right;">X</a>' +
-                '<h3 style="text-align: center;">New Specification</h3>' +
+                '<h3 style="text-align: center;"><%= type %> Specification</h3>' +
                 '<p>Type:' +
                     '<select name="type" style="margin-left: 27px;">' +
                         '<option value="ObjectOriented">Object Oriented</option>' +
                     '</select>' +
                 '</p>' +
                 '<p>Name: <input name="name" style="width: 300px; float: right;" value="<%= specification.name %>" /></p>' +
+                '<p>Repository(SSH): <input name="repository" style="width: 260px; float: right;" value="<%= specification.repository %>" /></p>' +
+                '<p>User Name: <input name="repository_user" style="width: 280px; float: right;" value="<%= specification.repository_user %>" /></p>' +
                 '<div style="float: right">' +
                     '<a href="#" id="save_specification_buttom" class="btn btn-primary">Save</a>' +
                 '</div>' +
@@ -113,8 +115,18 @@ templates = {
                 '<h3 style="text-align: center;">New Diagram</h3>' +
                 '<p>Type:' +
                     '<select name="type" style="margin-left: 27px;">' +
-                        '<option value="Class">Class</option>' +
+                        '<% _.each(types, function(type) { %>' +
+                            '<option value="<%= type %>"><%= type %></option>' +
+                        '<% }); %>' +
                     '</select>' +
+                '</p>' +
+                '<p>Repository Type:' +
+                    '<select name="type" style="margin-left: 27px;">' +
+                        '<% _.each(repository_types, function(type) { %>' +
+                            '<option value="<%= type %>"><%= type %></option>graph.name' +
+                        '<% }); %>' +
+                    '</select>' +
+                    'Path: <input name="repository_path" style="width: 100px; float: right;" value="<%= repository_path %>" />' +
                 '</p>' +
                 '<p>Name: <input name="name" style="width: 300px; float: right;" value="<%= graph.name %>" /></p>' +
                 '<div style="float: right">' +
