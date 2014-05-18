@@ -22,6 +22,11 @@ class SpecificationsController < ApplicationController
 
     @specification = Specification.find(params[:id])
     @specification.attributes = params
+
+    if @specification.repository_changed?
+      #'plugins/modeling/repositories/repo_' + spec.id.to_s
+    end
+
     @specification.save
 
     respond_to do |format|
@@ -40,7 +45,7 @@ class SpecificationsController < ApplicationController
 
     unless params[:repository].empty?
       name = 'plugins/modeling/repositories/repo_' + @specification.id.to_s
-      Git.clone(params[:repository], name)
+      create_git_repo(@specification)
     end
 
     respond_to do |format|
@@ -57,6 +62,21 @@ class SpecificationsController < ApplicationController
     respond_to do |format|
       #Todo: ver o que mandar aqui
       format.json { render json: {} }
+    end
+  end
+
+  private
+
+  def create_git_repo(spec)
+    begin
+      dir_path = 'plugins/modeling/repositories/repo_' + spec.id.to_s
+      unless File.directory?(dir_path)
+        g = Git.clone(spec.repository, dir_path)
+      else
+        logger.info "eeeeeeeeeeeeeeeeeeeeeiiiiiiiiiiiiiiiii"
+      end
+    rescue Exception
+      # Colocar o tratamento
     end
   end
 end

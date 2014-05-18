@@ -144,6 +144,8 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.39)
+    unageanu-javaclass (0.4.0)
+      rubyzip (>= 0.9.1)
     websocket (1.0.7)
     xpath (2.0.0)
       nokogiri (~> 1.3)
@@ -180,4 +182,5 @@ DEPENDENCIES
   ruby-openid (~> 2.3.0)
   selenium-webdriver
   shoulda (~> 3.3.2)
+  unageanu-javaclass
   yard

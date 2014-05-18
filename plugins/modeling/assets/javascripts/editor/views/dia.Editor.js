@@ -157,8 +157,9 @@ dia.Editor = Backbone.View.extend({
             specifications: this.specifications.models,
             graph: { name: "", type: "" },
             types: self.app.currentSpecification.get("concept_types"),
-            repository_types: self.app.currentSpecification.get("repository_types"),
-            repository_path: ""
+            repository_type: "",
+            repository_path: "",
+            repository_types: ["JavaProject"]
         }))
 
         $("#save_diagram_buttom").click(function(evt){
@@ -166,10 +167,14 @@ dia.Editor = Backbone.View.extend({
 
             var type = $div.find("select[name='type']")[0].value;
             var name = $div.find("input[name='name']")[0].value;
+            var repository_path = $div.find("input[name='repository_path']")[0].value;
+            var repository_type = $div.find("select[name='repository_type']")[0].value;
 
             var graph = new dia.Graph({
                 type: type,
                 name: name,
+                repository_path: repository_path,
+                repository_type: repository_type,
                 specification_id: self.app.currentSpecification.get("id")
             })
 
@@ -193,8 +198,12 @@ dia.Editor = Backbone.View.extend({
         $(".custom-modal").attr("id", "edit_diagram/" + id)
 
         $(".custom-modal").html(dia.template('Specification', 'edit_diagram', {
+            types: self.app.currentSpecification.get("concept_types"),
             specifications: this.specifications.models,
-            graph: { name: graph.get("name"), type: graph.get("type") }
+            graph: { name: graph.get("name"), type: graph.get("type") },
+            repository_type: graph.get("repository_type") || "",
+            repository_path: graph  .get("repository_path") || "",
+            repository_types: ["JavaProject"]
         }))
 
         $("#save_diagram_buttom").click(function(evt){

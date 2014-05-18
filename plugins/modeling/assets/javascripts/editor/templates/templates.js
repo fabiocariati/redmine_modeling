@@ -120,15 +120,18 @@ templates = {
                         '<% }); %>' +
                     '</select>' +
                 '</p>' +
-                '<p>Repository Type:' +
-                    '<select name="type" style="margin-left: 27px;">' +
-                        '<% _.each(repository_types, function(type) { %>' +
-                            '<option value="<%= type %>"><%= type %></option>graph.name' +
-                        '<% }); %>' +
-                    '</select>' +
-                    'Path: <input name="repository_path" style="width: 100px; float: right;" value="<%= repository_path %>" />' +
-                '</p>' +
                 '<p>Name: <input name="name" style="width: 300px; float: right;" value="<%= graph.name %>" /></p>' +
+                '<div style="border: 1px solid darkgray; padding: 2px;">' +
+                    '<div style="text-align: center;">GIT (SSH)</div>' +
+                    '<p style="margin-top: 3px;">Repository Type:' +
+                        '<select name="repository_type">' +
+                            '<% _.each(repository_types, function(type) { %>' +
+                            '<option value="<%= type %>"><%= type %></option>graph.name' +
+                            '<% }); %>' +
+                        '</select>' +
+                        'Path: <input name="repository_path" style="width: 135px; float: right;" value="<%= repository_path %>" />' +
+                    '</p>' +
+                '</div>' +
                 '<div style="float: right">' +
                     '<a href="#" id="save_diagram_buttom" class="btn btn-primary">Save</a>' +
                 '</div>' +

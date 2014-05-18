@@ -22,8 +22,6 @@ class ConceptModelsController < ApplicationController
     params.delete(:action)
     params.delete(:controller)
 
-    logger.info "------------------------------------"
-    logger.info params[:type]
     model = (params[:type] + 'Diagram').constantize
 
     params.delete(:type)
@@ -38,12 +36,16 @@ class ConceptModelsController < ApplicationController
 
   def save
     @concept_model = ConceptModel.find(params[:id])
+    logger.info "saveeeeeeeeeeeeeeeeeeeeeee"
 
     cells = params[:cells]
     params.delete(:cells)
 
     @concept_model.attributes = params[:graph]
     @concept_model.name = params[:name] unless params[:name].nil?
+    @concept_model.repository_path = params[:repository_path]
+    @concept_model.repository_type = params[:repository_type]
+
     @concept_model.save
 
     @concept_model.remove_deleted_cells(cells)
@@ -70,7 +72,7 @@ class ConceptModelsController < ApplicationController
 
     respond_to do |format|
       #Todo: ver o que mandar aqui
-      format.json { render json: {} }
+      format.json { render json: {concept_model: @concept_model} }
     end
   end
 
@@ -84,5 +86,6 @@ class ConceptModelsController < ApplicationController
       format.json { render json: {} }
     end
   end
+
 
 end

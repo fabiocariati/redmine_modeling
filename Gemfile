@@ -14,6 +14,7 @@ gem 'nokogiri'
 gem 'htmlentities'
 gem 'heroku'
 gem 'git'
+gem 'unageanu-javaclass'
 
 group :production do
   # gems specifically for Heroku go here
