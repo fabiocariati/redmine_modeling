@@ -3,7 +3,7 @@ uml.ClassDiagramToolbarView = dia.ToolbarView.extend({
         dia.ToolbarView.prototype.initialize.apply(this, arguments);
         this.classCount = 0;
 
-        this.icons = _.union(this.icons, ['class', 'association', 'generalization', 'implementation', 'aggregation', 'composition'], this.aftericons);
+        this.icons = _.union(this.icons, ['class', 'association', 'generalization', 'implementation', 'aggregation', 'composition'], this.aftericons, ['commit']);
     },
 
     class: function() {
@@ -31,5 +31,18 @@ uml.ClassDiagramToolbarView = dia.ToolbarView.extend({
     },
     composition: function() {
         this.paper.tool = uml.Composition
+    },
+
+    commit: function() {
+        var  graph = this.paper.model
+        graph.save({commit: true}, {
+            success: function (model, resp) {
+                //Todo resolver as duplicações
+                console.log("success");
+            },
+            error: function (model, response) {
+                console.log("error");
+            }
+        });
     }
 });

@@ -30,7 +30,7 @@ dia.Editor = Backbone.View.extend({
                             _.each(cells, function(c){
                                 c.id = c.id+"";
                                 var types = c.type.split("."),
-                                    module = types[0], entity = types[1];Class
+                                    module = types[0], entity = types[1];
                                 graph.addCell(new window[module][entity](c)); //Todo: Tirar uml.Class e deixar genérico
                             })
                         })
@@ -202,7 +202,7 @@ dia.Editor = Backbone.View.extend({
             specifications: this.specifications.models,
             graph: { name: graph.get("name"), type: graph.get("type") },
             repository_type: graph.get("repository_type") || "",
-            repository_path: graph  .get("repository_path") || "",
+            repository_path: graph.get("repository_path") || "",
             repository_types: ["JavaProject"]
         }))
 

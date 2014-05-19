@@ -26,6 +26,13 @@ module Concept
           child.save
         }
       end
+      model.childs.each{|child|
+        if attrs[c[0].to_sym]
+          if attrs[c[0].to_sym].select{|c| c['id']== child['id'] }.empty?
+            c[1].find(child['id']).destroy
+          end
+        end
+      }
     }
   end
 end

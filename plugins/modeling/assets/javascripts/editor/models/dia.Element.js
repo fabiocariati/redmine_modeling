@@ -57,6 +57,7 @@ dia.Element = joint.dia.Element.extend({
         var others = _.filter(this.get(type), function(val) {
             return val.position != pos;
         });
+        log(_.sortBy( others, function(el){ return el.position } )  )
         this.set(type, _.sortBy( others, function(el){ return el.position } ));
     }
 

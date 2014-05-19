@@ -60,7 +60,7 @@ uml.ClassView = dia.ElementView.extend({
     removeText: function(type, pos) {
         if(type == 'stereotype') {
             this.model.set(type,'');
-        } else if(this.model.get(type) instanceof Backbone.Collection) {
+        } else if(this.model.get(type) instanceof Array) {
             this.model.removeCollectionElement(type, pos);
         }
     },

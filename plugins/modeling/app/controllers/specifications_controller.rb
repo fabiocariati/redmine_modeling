@@ -24,7 +24,7 @@ class SpecificationsController < ApplicationController
     @specification.attributes = params
 
     if @specification.repository_changed?
-      #'plugins/modeling/repositories/repo_' + spec.id.to_s
+      change_git_repo(@specification)
     end
 
     @specification.save
@@ -71,10 +71,20 @@ class SpecificationsController < ApplicationController
     begin
       dir_path = 'plugins/modeling/repositories/repo_' + spec.id.to_s
       unless File.directory?(dir_path)
-        g = Git.clone(spec.repository, dir_path)
+        Git.clone(spec.repository, dir_path)
       else
         logger.info "eeeeeeeeeeeeeeeeeeeeeiiiiiiiiiiiiiiiii"
       end
+    rescue Exception
+      # Colocar o tratamento
+    end
+  end
+
+  def change_git_repo(spec)
+    begin
+      dir_path = 'plugins/modeling/repositories/repo_' + spec.id.to_s
+      FileUtils.rm_rf(dir_path)
+      Git.clone(spec.repository, dir_path)
     rescue Exception
       # Colocar o tratamento
     end

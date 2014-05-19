@@ -180,6 +180,12 @@ icons = {
         '<g transform="scale(.28) translate(20,22)">' +
             _.template(shapes.accepttime)({width: 35, stroke: 1/.28}) +
         '</g>'
+    ),
+
+    commit: toolbarIcon('Commit to repository', 'commit-icon',
+        '<g transform="scale(.04) translate(20,22)">' +
+            shapes.sendrepo +
+        '</g>'
     )
 
 
