@@ -14,7 +14,8 @@ class ClassConcept < ActiveRecord::Base
   end
 
   def childs
-    self.method_concepts.map{|m| m.attributes } + self.attribute_concepts.map{|a| a.attributes }
+    self.method_concepts.map{|m| m.attributes.merge(types: ['methods', MethodConcept]) } +
+        self.attribute_concepts.map{|a| a.attributes.merge(types: ['attributes', AttributeConcept]) }
   end
 
   def save_childs(cell)

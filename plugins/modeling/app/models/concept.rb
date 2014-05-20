@@ -15,7 +15,7 @@ module Concept
 
   def self.save_childs(model, child_classes, attrs)
     child_classes.each{ |c|
-      if attrs[c[0].to_sym]
+      unless attrs[c[0].to_sym].nil?
         attrs[c[0].to_sym].each{|m|
           if m[:id] && c[1].find(m[:id])
             child = c[1].find(m[:id])
@@ -24,15 +24,27 @@ module Concept
           end
           child.attributes = Concept.attr(child, m)
           child.save
+          m['id'] = child.id
         }
       end
-      model.childs.each{|child|
-        if attrs[c[0].to_sym]
-          if attrs[c[0].to_sym].select{|c| c['id']== child['id'] }.empty?
-            c[1].find(child['id']).destroy
-          end
-        end
-      }
     }
+    model.childs.each{|child|
+      unless attrs[child[:types][0]].nil?
+        if attrs[child[:types][0]].select{|a| a['id'] == child['id']}.empty?
+          child[:types][1].find(child['id']).destroy
+        end
+      else
+        model.send(child[:types][1].table_name).each{|c| c.destroy}
+      end
+    }
+    #model.childs.each{|child|
+    #  unless attrs[child[:types][0]].nil?
+    #    if attrs[child[:types][0]].select{|a| a['id'] == child['id']}.empty?
+    #      child[:types][1].find(child['id']).destroy
+    #    end
+    #  else
+    #    model.send(child[:types][2]).each{|c| c.destroy}
+    #  end
+    #}
   end
 end
