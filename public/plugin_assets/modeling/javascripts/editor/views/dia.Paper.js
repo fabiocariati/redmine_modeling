@@ -169,7 +169,8 @@ dia.Paper = joint.dia.Paper.extend({
                     new uml.CombinedFragment({
                         position: { x: box.x, y: box.y },
                         size: { width: box.width, height: box.height },
-                        operator: 'par'
+                        operator: 'par',
+                        age: "new"
                     })
                 );
             }

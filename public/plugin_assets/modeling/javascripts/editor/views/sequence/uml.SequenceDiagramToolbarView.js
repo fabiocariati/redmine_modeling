@@ -8,7 +8,8 @@ uml.SequenceDiagramToolbarView = dia.ToolbarView.extend({
     lifeline: function() {
         var lifeline = new uml.Lifeline({
             position: { x: 10 },
-            name: 'newLifeline'
+            name: 'newLifeline',
+            age: "new"
         });
         this.paper.model.addCell(lifeline);
     },
@@ -17,7 +18,8 @@ uml.SequenceDiagramToolbarView = dia.ToolbarView.extend({
         var actor_lifeline = new uml.Lifeline({
             position: { x: 10 },
             name: 'newActor',
-            subtype: 'Actor'
+            subtype: 'Actor',
+            age: "new"
         });
         this.paper.model.addCell(actor_lifeline);
     },

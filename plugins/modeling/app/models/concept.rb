@@ -13,6 +13,12 @@ module Concept
     filtered
   end
 
+  def self.attributes(model, mod)
+    #Todo: colocar versão completa
+    model.attributes.merge({type: mod})
+    .merge({position: {x: model.x, y: model.y}})
+  end
+
   def self.save_childs(model, child_classes, attrs)
     child_classes.each{ |c|
       unless attrs[c[0].to_sym].nil?
@@ -28,23 +34,16 @@ module Concept
         }
       end
     }
-    model.childs.each{|child|
-      unless attrs[child[:types][0]].nil?
-        if attrs[child[:types][0]].select{|a| a['id'] == child['id']}.empty?
-          child[:types][1].find(child['id']).destroy
+    if model.methods.include? :childs
+      model.childs.each{|child|
+        unless attrs[child[:types][0]].nil?
+          if attrs[child[:types][0]].select{|a| a['id'] == child['id']}.empty?
+            child[:types][1].find(child['id']).destroy
+          end
+        else
+          model.send(child[:types][1].table_name).each{|c| c.destroy}
         end
-      else
-        model.send(child[:types][1].table_name).each{|c| c.destroy}
-      end
-    }
-    #model.childs.each{|child|
-    #  unless attrs[child[:types][0]].nil?
-    #    if attrs[child[:types][0]].select{|a| a['id'] == child['id']}.empty?
-    #      child[:types][1].find(child['id']).destroy
-    #    end
-    #  else
-    #    model.send(child[:types][2]).each{|c| c.destroy}
-    #  end
-    #}
+      }
+    end
   end
 end

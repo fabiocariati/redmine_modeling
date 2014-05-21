@@ -8,7 +8,8 @@ uml.StateMachineToolbarView = dia.ToolbarView.extend({
     startstate: function() {
         var s0 = new uml.StartState({
             position: { x: 10  , y: 10 },
-            size: { width: 30, height: 30 }
+            size: { width: 30, height: 30 },
+            age: "new"
         });
         this.paper.model.addCell(s0);
     },
@@ -17,7 +18,8 @@ uml.StateMachineToolbarView = dia.ToolbarView.extend({
         var s = new uml.State({
             position: { x: 10  , y: 10 },
             size: { width: 300, height: 60 },
-            name: "newState"
+            name: "newState",
+            age: "new"
         });
         this.paper.model.addCell(s);
     },
@@ -25,7 +27,8 @@ uml.StateMachineToolbarView = dia.ToolbarView.extend({
     endstate: function() {
         var s = new uml.EndState({
             position: { x: 10  , y: 10 },
-            size: { width: 30, height: 30 }
+            size: { width: 30, height: 30 },
+            age: "new"
         });
         this.paper.model.addCell(s);
     },

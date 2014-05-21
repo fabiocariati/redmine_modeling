@@ -64,7 +64,6 @@ dia.Element = joint.dia.Element.extend({
            el.position = i;
         })
 
-
         this.set(type, elements);
     }
 

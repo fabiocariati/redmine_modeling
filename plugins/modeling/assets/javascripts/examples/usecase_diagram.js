@@ -1,6 +1,6 @@
 examples.userCaseGraph =  {
     id: 59,
-    type: 'Usecase',
+    type: 'UseCaseDiagram',
     name: 'Diagrama de caso de uso',
     elements: [
         {

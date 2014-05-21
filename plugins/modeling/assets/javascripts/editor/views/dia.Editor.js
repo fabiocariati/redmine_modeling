@@ -24,6 +24,7 @@ dia.Editor = Backbone.View.extend({
                 var graphs = [];
                 this.app.currentSpecification.get("graphs").fetch({
                     success: function(model, resp) { //Todo ver fromJSON, acho que é melhor
+                        log(resp)
                         _.each(resp, function(r){
                             var graph = self.app.currentSpecification.get("graphs").get(r.id);
                             var cells = r.cells;
@@ -169,7 +170,6 @@ dia.Editor = Backbone.View.extend({
             var name = $div.find("input[name='name']")[0].value;
             var repository_path = $div.find("input[name='repository_path']")[0].value;
             var repository_type = $div.find("select[name='repository_type']")[0].value;
-
             var graph = new dia.Graph({
                 type: type,
                 name: name,

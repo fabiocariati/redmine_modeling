@@ -2,6 +2,17 @@ class ConceptModel < ActiveRecord::Base
   unloadable
   belongs_to :specification
 
+  def concept_types
+    self.class.reflect_on_all_associations.select { |assoc| assoc.macro == :has_many}.map { |assoc| assoc.class_name.constantize}
+    .select{|m| m != 'Link'}
+  end
+
+  def cells
+    concepts = []
+    self.concept_types.map{|concept| concepts+=self.send(concept.table_name).map{|c| c.attrs }}
+    concepts + self.links.map{|l| l.attrs}
+  end
+
   def save_link(cell)
     attributes = Link.normalize_attrs(cell)
     if cell[:age] == 'new'

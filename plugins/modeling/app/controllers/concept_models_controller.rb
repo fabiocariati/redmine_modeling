@@ -35,6 +35,8 @@ class ConceptModelsController < ApplicationController
   end
 
   def save
+    logger.info "params:"
+    logger.info params
     @concept_model = ConceptModel.find(params[:id])
 
     cells = params[:cells]
