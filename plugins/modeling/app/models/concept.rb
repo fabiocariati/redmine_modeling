@@ -10,13 +10,24 @@ module Concept
       filtered['y'] = attrs[:position][:y]
     end
 
+    if (names.include? 'width') && (attrs[:size].class != Fixnum)
+      filtered['width'] = attrs[:size][:width]
+      filtered['height'] = attrs[:size][:height]
+    end
+
     filtered
   end
 
   def self.attributes(model, mod)
     #Todo: colocar versão completa
-    model.attributes.merge({type: mod})
-    .merge({position: {x: model.x, y: model.y}})
+    if model.class.method_defined? :width
+      model.attributes.merge({type: mod})
+      .merge({position: {x: model.x, y: model.y}})
+      .merge({size: { width: model.width, height: model.height }})
+    else
+      model.attributes.merge({type: mod})
+      .merge({position: {x: model.x, y: model.y}})
+    end
   end
 
   def self.save_childs(model, child_classes, attrs)

@@ -1,9 +1,27 @@
 uml.UseCaseView = dia.ElementView.extend({
 
     initialize: function() {
+        var self = this;
         this.createTextFieldFor('name');
+        _.bindAll(this, 'updateSize');
 
         dia.ElementView.prototype.initialize.apply(this, arguments);
+
+        this.model.on('change:name', function() {
+            self.updateSize();
+            self.trigger('change:attrs');
+        });
+    },
+
+    render: function() {
+        dia.ElementView.prototype.render.apply(this, arguments);
+        this.updateSize();
+    },
+
+    updateSize: function() {
+        var width = this.$('text')[0].getBBox().width + 20;
+        if(width < 80) width = 80;
+        this.model.set("size", {width: width, height: 35});
     },
 
     pointerup: function(evt, x, y) {

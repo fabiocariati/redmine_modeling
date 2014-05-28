@@ -3,7 +3,7 @@ class Specification < ActiveRecord::Base
   has_many :concept_models, dependent: :destroy
 
   def concept_types
-    ['Class', 'UseCase'] # Todo: tirar daqui
+    ['Class', 'UseCase', 'StateMachine', 'Activity', 'Sequence'] # Todo: tirar daqui
   end
 
   def repository_types

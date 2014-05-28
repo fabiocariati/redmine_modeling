@@ -90,6 +90,7 @@ uml.Extends = dia.Link.extend({
 uml.Message = dia.Link.extend({
     defaults: {
         type: 'uml.Message',
+        subType: 'MessageConcept',
         attrs: {
             '.marker-target': { d: 'M 10 0 L 0 5 L 10 10 z', fill: '#34495e', stroke: '#2c3e50' },
             '.connection': { stroke: '#2c3e50' }

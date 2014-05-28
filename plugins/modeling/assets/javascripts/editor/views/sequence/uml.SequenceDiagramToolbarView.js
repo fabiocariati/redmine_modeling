@@ -33,7 +33,7 @@ uml.SequenceDiagramToolbarView = dia.ToolbarView.extend({
     },
 
     interactionuse: function() {
-
+        this.paper.tool = 'uml.InteractionUse';
     }
 
 });

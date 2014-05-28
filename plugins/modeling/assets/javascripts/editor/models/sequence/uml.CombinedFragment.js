@@ -17,8 +17,8 @@ uml.CombinedFragment = dia.Element.extend({
         },
 
         operator: 'alt',
-        operands: new Backbone.Collection([
+        operands: [
             { name: '[guard]', linePosition: 0 }
-        ])
+        ]
     }, dia.Element.prototype.defaults)
 });

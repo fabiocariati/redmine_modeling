@@ -7,10 +7,9 @@ class ClassConcept < ActiveRecord::Base
   has_many :attribute_concepts
 
   def attrs
-    self.attributes.merge({type: 'uml.Class'})
+    Concept.attributes(self, 'uml.Class')
       .merge({methods: self.method_concepts.map{|m| m.attributes }})
       .merge({attributes: self.attribute_concepts.map{|a| a.attributes }})
-      .merge({position: {x: self.x, y: self.y}})
   end
 
   def childs

@@ -164,7 +164,7 @@ templates = {
     },
     Action: {
         markup: _.template(
-            '<rect class="main-reference" width="<%= width %>" height="30" rx="10" style="fill:white;stroke:black;stroke-width:1" />' +
+            '<rect class="main-reference" rx="10" style="fill:white;stroke:black;stroke-width:1" />' +
             '<text class="uml-action-name" />' 
         )
     },
@@ -288,6 +288,23 @@ templates = {
         ),
         tools: _.template(
             '<g class="uml-combinedfragment-tools element-tools" transform="translate(<%= box.x %>, <%= box.y %>)">' +
+                '<%= rect_border %>' +
+                '<%= remove_icon %>' +
+                '<%= add_icon %>' +
+                '<circle class="resizer" position="upper-right" cy="0" cx="<%= box.width %>" r="4" stroke="black" stroke-width="1" fill="white"/>' +
+                '<circle class="resizer" position="lower-right" cy="<%= box.height %>" cx="<%= box.width %>" r="4" stroke="black" stroke-width="1" fill="white"/>' +
+                '<circle class="resizer" position="lower-left" cy="<%= box.height %>" cx="0" r="4" stroke="black" stroke-width="1" fill="white"/>' +
+            '</g>' 
+        )
+    },
+    InteractionUse: {
+        markup: _.template(
+            '<rect style="stroke-width:1; stroke:black;" />' +
+            '<polygon points="0,0 45,0 45,10 35,20 0,20" style="fill:white;stroke:black;stroke-width:1" />' +
+            '<text class="uml-interactionuse-operator"/>' 
+        ),
+        tools: _.template(
+            '<g class="uml-interactionuse-tools element-tools" transform="translate(<%= box.x %>, <%= box.y %>)">' +
                 '<%= rect_border %>' +
                 '<%= remove_icon %>' +
                 '<%= add_icon %>' +

@@ -7,6 +7,7 @@ uml.Action = dia.Element.extend({
 
         attrs: {
             'text': { ref: '.main-reference', 'font-size': 14, text: '', 'ref-y': .5, 'ref-x': .5, 'y-alignment': 'middle', fill: 'black', 'font-family': 'Arial, helvetica, sans-serif' },
+            '.main-reference': {width: 60, height: 30},
             '.uml-action-name': {
                 'font-size': 16, 'font-family': 'Times New Roman', fill: '#000000'
             }

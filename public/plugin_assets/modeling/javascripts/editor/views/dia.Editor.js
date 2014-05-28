@@ -24,7 +24,7 @@ dia.Editor = Backbone.View.extend({
                 var graphs = [];
                 this.app.currentSpecification.get("graphs").fetch({
                     success: function(model, resp) { //Todo ver fromJSON, acho que é melhor
-                        log(resp)
+                        log('resp')
                         _.each(resp, function(r){
                             var graph = self.app.currentSpecification.get("graphs").get(r.id);
                             var cells = r.cells;
@@ -32,7 +32,7 @@ dia.Editor = Backbone.View.extend({
                                 c.id = c.id+"";
                                 var types = c.type.split("."),
                                     module = types[0], entity = types[1];
-                                graph.addCell(new window[module][entity](c)); //Todo: Tirar uml.Class e deixar genérico
+                                graph.addCell(new window[module][entity](c));
                             })
                         })
                         self.changeTo('paper', graph_id);

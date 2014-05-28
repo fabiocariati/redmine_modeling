@@ -14,16 +14,27 @@ class ConceptModel < ActiveRecord::Base
   end
 
   def save_link(cell)
-    attributes = Link.normalize_attrs(cell)
-    if cell[:age] == 'new'
-      link = self.links.build
+    if cell[:subType].nil?
+      attributes = Link.normalize_attrs(cell)
+      if cell[:age] == 'new'
+        link = self.links.build
+      else
+        link = Link.find(cell['id'])
+        cell.delete('id')
+      end
+      link.attributes = attributes
+      link.save
     else
-
-      link = Link.find(cell['id'])
-      cell.delete('id')
+      attributes = Object.const_get(cell[:subType]).normalize_attrs(cell)
+      if cell[:age] == 'new'
+        link = self.message_concepts.build #Todo: tirar isso daqui
+      else
+        link = MessageConcept.find(cell['id']) #Todo: tirar isso daqui
+        cell.delete('id')
+      end
+      link.attributes = attributes
+      link.save
     end
-    link.attributes = attributes
-    link.save
   end
 
   def save_concept(cell)
@@ -36,6 +47,8 @@ class ConceptModel < ActiveRecord::Base
       concept = model.find(cell[:id])
     end
 
+    logger.info "666666666666666666666666666666666666666666666666666666666"
+    logger.info concept.attrs_filter(cell)
     concept.attributes = concept.attrs_filter(cell)
     concept.save
 

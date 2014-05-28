@@ -167,9 +167,21 @@ dia.Paper = joint.dia.Paper.extend({
                 var box = this._virtualRect.bbox();
                 this.model.addCell(
                     new uml.CombinedFragment({
+                        type: 'uml.CombinedFragment', //Todo: tirar daqui
                         position: { x: box.x, y: box.y },
                         size: { width: box.width, height: box.height },
                         operator: 'par',
+                        age: "new"
+                    })
+                );
+            }
+            if (this.tool == 'uml.InteractionUse') {
+                var box = this._virtualRect.bbox();
+                this.model.addCell(
+                    new uml.InteractionUse({
+                        type: 'uml.InteractionUse', //Todo: tirar daqui
+                        position: { x: box.x, y: box.y },
+                        size: { width: box.width, height: box.height },
                         age: "new"
                     })
                 );

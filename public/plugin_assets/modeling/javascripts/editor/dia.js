@@ -24,6 +24,7 @@ dia = {
         // Override Backbone.sync to add CSRF-TOKEN HEADER
         Backbone.sync = (function(original) {
             return function(method, model, options) {
+                log(model)
                 // Differents urls
                 if (model.methodUrl && model.methodUrl[method.toLowerCase()]) {
                     options = options || {};

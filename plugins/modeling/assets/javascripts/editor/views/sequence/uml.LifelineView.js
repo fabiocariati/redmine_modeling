@@ -1,16 +1,23 @@
 uml.LifelineView = dia.ElementView.extend({
 
     initialize: function() {
+        var self = this;
         this.createTextFieldFor('name');
+        _.bindAll(this, 'updateSize');
 
         dia.ElementView.prototype.initialize.apply(this, arguments);
+
+        this.model.on('change:name', function() {
+            self.updateSize();
+            self.trigger('change:attrs');
+        });
     },
 
     render: function() {
-        var subtype = !_.isUndefined(this.model.get('subtype')) ?  this.model.get('subtype') : '';
+        var subtype = !_.isUndefined(this.model.get('subtype')) &&  this.model.get('subtype') ?  this.model.get('subtype') : '';
 
         V(this.el).append(
-            V(dia.template('Lifeline', 'markup', { lineY: 40 }))
+            V(dia.template(subtype + 'Lifeline', 'markup', { lineY: 40 }))
         );
 
         if(subtype == 'Actor') {
@@ -22,7 +29,15 @@ uml.LifelineView = dia.ElementView.extend({
         this.update();
         this.resize();
         this.translate();
+
+        this.updateSize();
         return this;
+    },
+
+    updateSize: function() {
+        var width = this.$('text')[0].getBBox().width + 20;
+        if(this.model.get('subtype') != 'Actor')
+            this.$('.main-reference').attr('width', width);
     },
 
     pointermove: function(evt, x, y) {
@@ -55,7 +70,8 @@ uml.LifelineView = dia.ElementView.extend({
                     source: { id: this.model.id },
                     target: { id: target.model.id },
                     linePosition: y,
-                    name: 'newMessage'
+                    name: 'newMessage',
+                    age: 'new'
                 });
                 this.paper.model.addCell(message);
             } else {
@@ -63,7 +79,8 @@ uml.LifelineView = dia.ElementView.extend({
                     source: { id: this.model.id },
                     target: { id: this.model.id },
                     linePosition: y,
-                    name: 'newSelfMessage'
+                    name: 'newSelfMessage',
+                    age: 'new'
                 });
                 this.paper.model.addCell(message);
             }

@@ -11,10 +11,9 @@ uml.ActionView = dia.ElementView.extend({
     },
 
     render: function() {
-        var subtype = !_.isUndefined(this.model.get('subtype')) ?  this.model.get('subtype') : '';
-
+        var subtype = this.model.get('subtype') && !_.isUndefined(this.model.get('subtype')) ?  this.model.get('subtype') : '';
         V(this.el).append(
-            V(dia.template(subtype + 'Action', 'markup', {width: 80, stroke:1}))
+            V(dia.template(subtype + this.model.get('type').split(".")[1], 'markup', {width: 80, stroke:1}))
         );
 
         this.update();
@@ -44,6 +43,7 @@ uml.ActionView = dia.ElementView.extend({
             }
         } else {
             text['text-anchor'] = 'middle'
+            this.model.get('attrs')['.main-reference']['width'] = width + 10
         }
 
         this.model.trigger('change:attrs')
