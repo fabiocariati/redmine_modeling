@@ -1,6 +1,6 @@
 examples.stateGraph = {
     id: 58,
-    type: 'StateMachine',
+    type: 'StateMachineDiagram',
     name: 'Máquina de estados',
     elements: [
         {
@@ -34,6 +34,7 @@ examples.stateGraph = {
             type: 'uml.State',
             position: { x:530  , y: 400 },
             name: "sub state 4",
+            parent: "41",
             events: [{ name: "entry / create()", position: 0}]
         },
         {

@@ -1,3 +1,9 @@
 class ObjectOrientedSpecification < Specification
-  has_many :class_diagrams, class_name: 'ClassDiagram', foreign_key: :specification_id
+  def concept_types
+    ['Class', 'UseCase', 'StateMachine', 'Activity', 'Sequence']
+  end
+
+  def repository_types
+    ['JavaProject']
+  end
 end

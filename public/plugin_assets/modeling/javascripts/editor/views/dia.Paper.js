@@ -182,6 +182,7 @@ dia.Paper = joint.dia.Paper.extend({
                         type: 'uml.InteractionUse', //Todo: tirar daqui
                         position: { x: box.x, y: box.y },
                         size: { width: box.width, height: box.height },
+                        name: "InteractionUse",
                         age: "new"
                     })
                 );

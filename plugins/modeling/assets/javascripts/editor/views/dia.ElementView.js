@@ -16,11 +16,12 @@ dia.ElementView = joint.dia.ElementView.extend({
 
         this.pointerMoving = false;
 
-        _.bindAll(this, 'unrender', 'removeTools', 'updateWidthByText');
+        _.bindAll(this, 'unrender', 'removeTools', 'updateWidthByText', 'updateParent');
 
         this.model.on({
             'remove': this.unrender,
-            'change:attrs change:position change:size': this.removeTools
+            'change:attrs change:position change:size': this.removeTools,
+            'change:parent': this.updateParent
         });
 
         // Convention for template rendering
@@ -62,6 +63,17 @@ dia.ElementView = joint.dia.ElementView.extend({
             width: largest_of+12,
             height: this.model.get('size').height
         });
+    },
+
+    updateParent: function() {
+        if(this.model.get('parent')) {
+            var self = this;
+            var model = _.find(this.paper.model.getElements(), function(el){
+                return el.get("id") == self.model.get('parent');
+            });
+
+            if(model) model.embed(this.model);
+        }
     },
 
     renderTextInput: function(target, dispX) {

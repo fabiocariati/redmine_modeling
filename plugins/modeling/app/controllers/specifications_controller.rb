@@ -5,7 +5,10 @@ class SpecificationsController < ApplicationController
     @project = Project.find(params[:project_id])
     @specifications = Specification.where(project_id: @project.id)
 
-    @specifications = @specifications.map{|s| s.attributes.merge({concept_types: s.concept_types, }).merge({repository_types: s.repository_types, })}
+    @specifications = @specifications.map{|s|
+      s.attributes.merge({concept_types: s.concept_types, })
+      .merge({repository_types: s.repository_types, })
+    }
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,7 +44,7 @@ class SpecificationsController < ApplicationController
     params.delete(:action)
     params.delete(:controller)
 
-    @specification = Specification.create(params)
+    @specification = ObjectOrientedSpecification.create(params)
 
     unless params[:repository].empty?
       name = 'plugins/modeling/repositories/repo_' + @specification.id.to_s

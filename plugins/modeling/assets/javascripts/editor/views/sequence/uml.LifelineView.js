@@ -36,8 +36,10 @@ uml.LifelineView = dia.ElementView.extend({
 
     updateSize: function() {
         var width = this.$('text')[0].getBBox().width + 20;
-        if(this.model.get('subtype') != 'Actor')
+        if(this.model.get('subtype') != 'Actor') {
             this.$('.main-reference').attr('width', width);
+            this.$('.lifeline').attr('x1', width/2).attr('x2', width/2);
+        }
     },
 
     pointermove: function(evt, x, y) {

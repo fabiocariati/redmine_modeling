@@ -262,7 +262,7 @@ templates = {
             '<rect class="main-reference" width="70" height="35" style="stroke-width:1; stroke:black; fill: white" />' +
             '<text class="uml-lifeline-name" />' +
             '<path class="connection-wrap" d="M 35 <%= lineY %> 35 <%= lineY + 260 %>" />' +
-            '<line class="lifeline" x1="35" y1="<%= lineY %>" x2="35" y2="<%= lineY + 260 %>" style="stroke-dasharray: 10, 5; stroke: black; stroke-width: 1;"/>' 
+            '<line class="lifeline" y1="<%= lineY %>" y2="<%= lineY + 260 %>" style="stroke-dasharray: 10, 5; stroke: black; stroke-width: 1;"/>' 
         )
     },
     ActorLifeline: {
@@ -299,15 +299,15 @@ templates = {
     },
     InteractionUse: {
         markup: _.template(
-            '<rect style="stroke-width:1; stroke:black;" />' +
+            '<rect style="stroke-width:1; stroke:black; fill:white;" />' +
             '<polygon points="0,0 45,0 45,10 35,20 0,20" style="fill:white;stroke:black;stroke-width:1" />' +
-            '<text class="uml-interactionuse-operator"/>' 
+            '<text class="uml-interactionuse-name" />' +
+            '<text class="uml-interactionuse-ref">ref</text>' 
         ),
         tools: _.template(
             '<g class="uml-interactionuse-tools element-tools" transform="translate(<%= box.x %>, <%= box.y %>)">' +
                 '<%= rect_border %>' +
                 '<%= remove_icon %>' +
-                '<%= add_icon %>' +
                 '<circle class="resizer" position="upper-right" cy="0" cx="<%= box.width %>" r="4" stroke="black" stroke-width="1" fill="white"/>' +
                 '<circle class="resizer" position="lower-right" cy="<%= box.height %>" cx="<%= box.width %>" r="4" stroke="black" stroke-width="1" fill="white"/>' +
                 '<circle class="resizer" position="lower-left" cy="<%= box.height %>" cx="0" r="4" stroke="black" stroke-width="1" fill="white"/>' +

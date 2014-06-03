@@ -17,7 +17,6 @@ uml.StateMachineDiagramToolbarView = dia.ToolbarView.extend({
     state: function() {
         var s = new uml.State({
             position: { x: 10  , y: 10 },
-            size: { width: 300, height: 60 },
             name: "newState",
             age: "new"
         });

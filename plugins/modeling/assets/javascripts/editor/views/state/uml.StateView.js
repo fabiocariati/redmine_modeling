@@ -14,6 +14,9 @@ uml.StateView = dia.ElementView.extend({
         dia.ElementView.prototype.render.apply(this, arguments);
 
         this.updateSize();
+
+        this.updateParent();
+        log(this.model)
     },
 
     updateSize: function() {
@@ -48,10 +51,14 @@ uml.StateView = dia.ElementView.extend({
                 var box = V(text).bbox();
                 textHeight += box.height;
             });
-            textHeight +=  20;
         }
 
+        textHeight += 15;
+
         var height = parentBox.height + greatestBottomDiff + 8;
+        if(this.model.get("events").length == 0) height += 20;
+        var diff = 0;
+        log(height- parentBox.height - greatestBottomDiff + 8)
         this.model.set('size', {
             width: parentBox.width + greatestRightDiff + 8,
             height: height > textHeight ? height : textHeight
@@ -125,21 +132,20 @@ uml.StateView = dia.ElementView.extend({
                 dia.ElementView.prototype.pointermove.apply(this, arguments);
             }
 
-            if(!this.pointerMoving) {
-                var self = this;
-                _.each(this.model.getEmbeddedCells(), function(cell) {
-                    if(cell.get('type')== 'uml.State') {
-                        cell.toFront();
-                        _.each(self.paper.model.getConnectedLinks(cell), function(link){
-                            link.toFront();
-                        });
-                    }
-                });
+            var self = this;
+            _.each(this.model.getEmbeddedCells(), function(cell) {
+                if(cell.get('type')== 'uml.State') {
+                    cell.toFront();
+                    _.each(self.paper.model.getConnectedLinks(cell), function(link){
+                        link.toFront();
+                    });
+                }
+            });
 
-                _.each(self.paper.model.getConnectedLinks(this.model), function(link){
-                    link.toFront();
-                });
-            }
+            _.each(self.paper.model.getConnectedLinks(this.model), function(link){
+                link.toFront();
+            });
+
         } else if(this.paper.isToolLink()){
             this.paper.moveLink(this, x, y);
         }
@@ -151,13 +157,20 @@ uml.StateView = dia.ElementView.extend({
         if (this.paper.tool == 'dragger') {
             if(this.pointerMoving) {
                 this.pointerMoving = false;
-                var self = this;
-                var views = this.paper.findViewsFromPoint({
-                    x: x, y: y
-                });
-                _.each(views, function(view){
-                    if(view.id != self.id) view.model.embed(self.model);
-                });
+                if(!this.model.get("parent") || this.model.get("parent") == null) {
+                    var self = this;
+                    var views = this.paper.findViewsFromPoint({
+                        x: x, y: y
+                    });
+                    var target = _.find(views, function(view){
+                        return view.id != self.id;
+                    });
+                    if(target) {
+                        var parent = target.model;
+                        log("setparent")
+                        this.model.set('parent', parent.get("id"));
+                    }
+                }
             } else {
                 dia.ElementView.prototype.pointerup.apply(this, arguments);
             }
