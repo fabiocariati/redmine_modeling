@@ -24,7 +24,6 @@ dia.Editor = Backbone.View.extend({
                 var graphs = [];
                 this.app.currentSpecification.get("graphs").fetch({
                     success: function(model, resp) { //Todo ver fromJSON, acho que é melhor
-                        log('resp')
                         _.each(resp, function(r){
                             var graph = self.app.currentSpecification.get("graphs").get(r.id);
                             var cells = r.cells;
@@ -103,7 +102,6 @@ dia.Editor = Backbone.View.extend({
                     app.navigate("edit/" + resp.id, { trigger: true, replace: true });
                 },
                 error: function(model, resp) {
-                    log(resp.responseText)
                 }
             });
         })
@@ -145,7 +143,7 @@ dia.Editor = Backbone.View.extend({
                     app.navigate("edit/" + resp.id, { trigger: true, replace: true });
                 },
                 error: function(model, resp) {
-                    log(resp.responseText)
+//                    log(resp.responseText)
                 }
             });
         })
@@ -184,7 +182,7 @@ dia.Editor = Backbone.View.extend({
                     self.app.currentSpecification.addGraph(graph);
                 },
                 error: function(model, resp) {
-                    log(resp.responseText)
+//                    log(resp.responseText)
                 }
             });
         })
@@ -221,7 +219,7 @@ dia.Editor = Backbone.View.extend({
                     self.app.navigate("graph/" + model.get("specification_id") + "/" + resp.id, { trigger: true, replace: true });
                 },
                 error: function(model, resp) {
-                    log(resp.responseText)
+//                    log(resp.responseText)
                 }
             });
         })

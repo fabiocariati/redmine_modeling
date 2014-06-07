@@ -16,7 +16,7 @@ uml.StateView = dia.ElementView.extend({
         this.updateSize();
 
         this.updateParent();
-        log(this.model)
+//        log(this.model)
     },
 
     updateSize: function() {
@@ -58,7 +58,6 @@ uml.StateView = dia.ElementView.extend({
         var height = parentBox.height + greatestBottomDiff + 8;
         if(this.model.get("events").length == 0) height += 20;
         var diff = 0;
-        log(height- parentBox.height - greatestBottomDiff + 8)
         this.model.set('size', {
             width: parentBox.width + greatestRightDiff + 8,
             height: height > textHeight ? height : textHeight
@@ -167,7 +166,6 @@ uml.StateView = dia.ElementView.extend({
                     });
                     if(target) {
                         var parent = target.model;
-                        log("setparent")
                         this.model.set('parent', parent.get("id"));
                     }
                 }

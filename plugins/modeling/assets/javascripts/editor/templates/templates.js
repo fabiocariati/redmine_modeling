@@ -99,6 +99,7 @@ templates = {
                 '<p>Type:' +
                     '<select name="type" style="margin-left: 27px;">' +
                         '<option value="ObjectOriented">Object Oriented</option>' +
+                        '<option value="General">General</option>' +
                     '</select>' +
                 '</p>' +
                 '<p>Name: <input name="name" style="width: 300px; float: right;" value="<%= specification.name %>" /></p>' +
@@ -136,6 +137,12 @@ templates = {
                     '<a href="#" id="save_diagram_buttom" class="btn btn-primary">Save</a>' +
                 '</div>' +
             '</div>' 
+        )
+    },
+    Node: {
+        markup: _.template(
+            '<circle r="20" stroke="black" stroke-width="2" fill="white"/>' +
+            '<text class="general-node-name" />' 
         )
     },
     UseCase: {
@@ -267,7 +274,7 @@ templates = {
     },
     ActorLifeline: {
         markup: _.template(
-            '<g class="main-reference">' +
+            '<g class="main-reference" transform="scale(2) translate(-3.75,-15)">' +
                 '<circle cy="13" cx="6" r="3.5" stroke="black" stroke-width="2" fill="white"/>' +
                 '<line x1="6" y1="16" x2="6" y2="23" style="stroke:black;stroke-width:2"/>' +
                 '<line x1="0" y1="19" x2="12" y2="19" style="stroke:black;stroke-width:2"/>' +

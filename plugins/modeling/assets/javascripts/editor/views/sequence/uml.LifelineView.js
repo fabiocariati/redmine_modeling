@@ -31,6 +31,7 @@ uml.LifelineView = dia.ElementView.extend({
         this.translate();
 
         this.updateSize();
+
         return this;
     },
 
@@ -39,6 +40,10 @@ uml.LifelineView = dia.ElementView.extend({
         if(this.model.get('subtype') != 'Actor') {
             this.$('.main-reference').attr('width', width);
             this.$('.lifeline').attr('x1', width/2).attr('x2', width/2);
+            this.model.get('attrs')['.uml-lifeline-name'] = {
+                'font-size': 14, ref: 'rect','ref-x': .5, 'ref-y': .25, 'font-family': 'Times New Roman', fill: '#000000'
+            }
+            this.model.trigger('change:attrs')
         }
     },
 

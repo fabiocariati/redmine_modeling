@@ -3,6 +3,9 @@ uml.MessageView = joint.dia.LinkView.extend({
     initialize: function() {
         joint.dia.LinkView.prototype.initialize.apply(this, arguments);
 
+        this.vTextFocus = V(effects.textFocus());
+        this.$input = $(tools.inputText);
+
         this.model.on({
            'change': this.update
         })
@@ -61,7 +64,6 @@ uml.MessageView = joint.dia.LinkView.extend({
             width:10, height: 50,
             x: sourcePosition.x + (sourceBox.width/2) - 5, y: linepos
         })
-
         if(source.id != target.id) {
             if(targetPosition.x - sourcePosition.x >= sourceBox.width/2 - targetBox.width/2) {
                 var disp = -5;
@@ -69,16 +71,27 @@ uml.MessageView = joint.dia.LinkView.extend({
                 var disp = 5;
             }
 
-            this._V.markerTarget.translateAndAutoOrient({ x: targetPosition.x + (targetBox.width/2) + disp, y: linepos }, { x: sourcePosition.x, y: linepos }, this.paper.viewport);
+//            this._V.markerTarget.translateAndAutoOrient({ x: targetPosition.x + (targetBox.width/2) + disp, y: linepos }, { x: sourcePosition.x, y: linepos }, this.paper.viewport);
 
             this._V.lifeRectTarget.attr({
                 width: 10, height: 30,
                 x: targetPosition.x + (targetBox.width/2) - 5, y: linepos
             })
 
+            var dispX = 0, dispMarker = 0;
+            if((linepos > targetPosition.y) && (linepos < (targetPosition.y + 35))) { // se é criação de objeto
+                this._V.lifeRectTarget.attr('display', 'none')
+                dispX = -(targetBox.width/2 - 5) - 5;
+                dispMarker = -(targetBox.width/2 - 5);
+            } else {
+                this._V.lifeRectTarget.attr('display', 'inline')
+            }
+
+            this._V.markerTarget.translateAndAutoOrient({ x: targetPosition.x + dispMarker + (targetBox.width/2) + disp, y: linepos }, { x: sourcePosition.x, y: linepos }, this.paper.viewport);
+
             var pathData = [
                 'M', sourcePosition.x + sourceBox.width/2, linepos,
-                targetPosition.x + targetBox.width/2, linepos
+                targetPosition.x + dispX + targetBox.width/2, linepos
             ].join(' ');
         } else {
             this._V.markerTarget.translateAndAutoOrient({ x: targetPosition.x + (targetBox.width/2) + 25, y: linepos + 25 }, { x: sourcePosition.x + 60 , y: linepos + 25 }, this.paper.viewport);
@@ -133,11 +146,95 @@ uml.MessageView = joint.dia.LinkView.extend({
         this.$('.labels').append(labelNode);
     },
 
+    renderTextFocus: function(target) {
+        $('.element-input-text').remove();
+        $('.text-focus').remove();
+        var text = $(target).closest('text'),
+            box = V(text[0]).bbox(),
+            tSize = text.find('tspan').size(),
+            self = this;
+
+        if(tSize > 0) {
+            text = $(target);
+            box.y += (box.height / tSize) * $(text).index();
+            if(text[0].tagName == 'text') return;
+        }
+
+        $(this.paper.svg).unbind('click touchend').bind('click touchend', function(e) {
+            if($(e.target).attr('class') == 'text-focus') {
+                self.vTextFocus.remove();
+                if(self.paper.currentElement.id == self.id) self.renderTextInput(text[0]);
+            } else if(e.target.id != self.paper.currentFocus.attr('id') || self.paper.currentElement.id != self.id) {
+                self.vTextFocus.remove();
+            }
+        });
+
+        box.width = text[0].getComputedTextLength() + 2;
+        box.height = (box.height + 1) / (tSize > 0 ? tSize : 1 );
+        box.x = box.x - 1;
+
+        this.paper.currentFocus = text;
+        this.paper.currentElement = this
+
+        this.vTextFocus.attr(box);
+
+        V(this.paper.svg).append(this.vTextFocus.node);
+    },
+
+    renderTextInput: function(target, dispX) {
+        if(!dispX) dispX = 0;
+
+        var self = this,
+            $text = $(target).closest('text'),
+            offset = this.paper.$el.offset(),
+            tSize =  $text.find('tspan').size(),
+            text = this.model.get("name"),
+            pos = tSize > 0 ? $(target).index() : 0,
+            obj_text = _.find(text, function(t){ return t.position == pos }),
+            textContent = text instanceof Array ? obj_text.name : text,
+            box = {
+                left: $text.position().left - 14 + dispX + offset.left,
+                top: (tSize > 0 ? (($text[0].getBBox().height - 3) / tSize) * $(target).index() : 0) + $text.position().top,
+                width: (target.getComputedTextLength() + 10) - (dispX * 2)
+            };
+
+        this.$input.val(textContent)
+            .css({
+                'left': box.left + 'px',
+                'top': box.top + 'px',
+                'width': box.width
+            })
+            .on('focusout keypress', function(e) {
+                if (e.keyCode == 13 || e.type != 'keypress') { //enter press
+                    self.setText($(this).val(), 0,  pos)
+                    self.$input.remove();
+                }
+            });
+
+        $('svg').bind('click touchend', function(e) {
+            var notAddTool = $(e.target).closest('g').attr('class') != 'add-icon';
+            if(notAddTool) self.$input.remove();
+        });
+
+        this.$input.appendTo('body').select();
+    },
+
     pointermove: function(evt, x, y) {
         if(this.paper.tool == 'dragger') {
             this.model.set('linePosition', y)
         } else if(this.paper.tool == uml.Message) {
             alert('implementar')
+        }
+    },
+
+    pointerdown: function() {
+
+    },
+
+    pointerup: function(evt, x, y) {
+        if(evt.target.tagName == 'text') {
+            log(this.paper)
+            this.renderTextFocus(evt.target)
         }
     }
 

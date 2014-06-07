@@ -44,7 +44,7 @@ class SpecificationsController < ApplicationController
     params.delete(:action)
     params.delete(:controller)
 
-    @specification = ObjectOrientedSpecification.create(params)
+    @specification = (params['type'] + 'Specification').constantize.create(params)
 
     unless params[:repository].empty?
       name = 'plugins/modeling/repositories/repo_' + @specification.id.to_s

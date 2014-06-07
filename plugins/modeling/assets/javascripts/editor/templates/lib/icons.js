@@ -186,7 +186,15 @@ icons = {
         '<g transform="scale(.04) translate(20,22)">' +
             shapes.sendrepo +
         '</g>'
+    ),
+
+    node: toolbarIcon('Add Node', 'node-icon',
+        '<g transform="translate(10,10)">' +
+            '<circle r="7" stroke="black" stroke-width="1.5" fill="white"/>' +
+        '</g>'
     )
+
+
 
 
 }

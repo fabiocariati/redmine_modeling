@@ -95,7 +95,8 @@ uml.Message = dia.Link.extend({
             '.marker-target': { d: 'M 10 0 L 0 5 L 10 10 z', fill: '#34495e', stroke: '#2c3e50' },
             '.connection': { stroke: '#2c3e50' }
         },
-        linePosition: 100
+        linePosition: 100,
+        name:''
     }
 });
 

@@ -8,7 +8,7 @@ uml.Lifeline = dia.Element.extend({
         attrs: {
             'text': { 'text-anchor': 'middle', ref: '.main-reference', 'ref-x': .5, 'ref-y':.5, fill: 'black', 'font-family': 'Arial, helvetica, sans-serif' },
             '.uml-lifeline-name': {
-                'font-size': 14, 'font-family': 'Times New Roman', fill: '#000000'
+                'font-size': 14, ref: 'rect', 'font-family': 'Times New Roman', fill: '#000000'
             }
         },
 

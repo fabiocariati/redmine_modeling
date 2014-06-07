@@ -3,7 +3,7 @@ class ConceptModelsController < ApplicationController
 
   def show
     @specification = Specification.find(params[:specification_id])
-    @concept_models = @specification.concept_models
+    @concept_models = @specification.concept_models#.where(type: "UseCaseDiagram")
 
     @concept_models = @concept_models.map{|s|
       unless s.type.nil?

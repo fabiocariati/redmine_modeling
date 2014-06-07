@@ -38,9 +38,13 @@ dia.ElementView = joint.dia.ElementView.extend({
         var model = this.model;
 
         var type = model.get('type').split('.');
+        var module = type[0];
+        var entity = type[1];
+
+        if(entity == 'Node') module = 'general';
 
         var updateFunction = function() {
-            model.get('attrs')['.'+type[0] + '-' + type[1].toLowerCase() + '-' + attribute].text = model.get(attribute);
+            model.get('attrs')['.'+module + '-' + entity.toLowerCase() + '-' + attribute].text = model.get(attribute);
             model.trigger('change:attrs');
         }
         this.listenTo(this.model, 'change:'+attribute, updateFunction);
@@ -261,13 +265,13 @@ dia.ElementView = joint.dia.ElementView.extend({
     pointerdown: function(evt, x, y) {
         // Todo: melhorar
         // Isso é feito para contornar o problema de não atribuir link a um target que está toFront
-        var self = this;
-        if(!this.pointerMoving) {
-            _.each(this.paper.model.getElements(), function(el) {
-                if(el.id != self.model.id) el.toBack();
-            })
-            this.model.toFront();
-        }
+//        var self = this;
+//        if(!this.pointerMoving) {
+//            _.each(this.paper.model.getElements(), function(el) {
+//                if(el.id != self.model.id) el.toBack();
+//            })
+//            this.model.toFront();
+//        }
         // Fim todo
 
         if (this.paper.tool == 'dragger') {

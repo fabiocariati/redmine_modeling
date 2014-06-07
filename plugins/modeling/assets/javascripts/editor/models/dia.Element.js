@@ -4,10 +4,10 @@ dia.Element = joint.dia.Element.extend({
 
         size: { width: 0, height: 0 },
 
-        type: 'dia.Element'//,
-//        attrs: {
+        type: 'dia.Element',
+        attrs: {
 //            '.': { filter: { name: 'dropShadow', args: { dx: 1, dy: 1, blur: 2 } } }
-//        }
+        }
 
     }, joint.dia.Element.prototype.defaults),
 

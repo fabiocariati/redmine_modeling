@@ -57,7 +57,7 @@ dia.SpecificationView = Backbone.View.extend({
                     $(".paper").hide();
                 },
                 error: function(model, resp) {
-                    log(resp.responseText)
+//                    log(resp.responseText)
                 }
             })
         })
@@ -70,6 +70,8 @@ dia.SpecificationView = Backbone.View.extend({
 
         var type = graph.get('type'),
             module ='uml'; //Todo: Tirar uml daqui
+
+        if(type == 'DirectedGraphDiagram') module = 'general'; //Todo: Tirar
 
         var paper = new dia.Paper({
             el: $('#paper_' + graph.get('id')),

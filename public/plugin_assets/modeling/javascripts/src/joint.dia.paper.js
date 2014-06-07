@@ -254,7 +254,7 @@ joint.dia.Paper = Backbone.View.extend({
     findViewByModel: function(cell) {
 
         var id = _.isString(cell) ? cell : cell.id;
-        
+
         var $view = this.$('[model-id="' + id + '"]');
         if ($view.length) {
 
@@ -274,6 +274,7 @@ joint.dia.Paper = Backbone.View.extend({
 	    return g.rect(V(view.el).bbox(false, this.viewport)).containsPoint(p);
 	}, this);
     },
+
 
     // Find all views in given area
     findViewsInArea: function(r) {

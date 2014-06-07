@@ -66,10 +66,10 @@ dia.ToolbarView = Backbone.View.extend({
 //                       log("test")
 //                   }
 //               })
-               console.log("success");
+//               console.log("success");
            },
            error: function (model, response) {
-               console.log("error");
+//               console.log("error");
            }
        });
     },

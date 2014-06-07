@@ -38,10 +38,10 @@ uml.ClassDiagramToolbarView = dia.ToolbarView.extend({
         graph.save({commit: true}, {
             success: function (model, resp) {
                 //Todo resolver as duplicações
-                console.log("success");
+//                console.log("success");
             },
             error: function (model, response) {
-                console.log("error");
+//                console.log("error");
             }
         });
     }
