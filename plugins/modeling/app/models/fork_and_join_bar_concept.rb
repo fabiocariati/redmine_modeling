@@ -1,11 +1,11 @@
 class ForkAndJoinBarConcept < ActiveRecord::Base
   unloadable
-  include Concept
+  include Dia
 
   belongs_to :concept_model
 
   def attrs
-    Concept.attributes(self, 'uml.ForkAndJoinBar')
+    Dia.attributes(self, 'uml.ForkAndJoinBar')
   end
 
   def childs
@@ -13,10 +13,10 @@ class ForkAndJoinBarConcept < ActiveRecord::Base
   end
 
   def save_childs(cell)
-    Concept.save_childs(self, {}, cell)
+    Dia.save_childs(self, {}, cell)
   end
 
   def attrs_filter(attrs)
-    Concept.attr(self, attrs)
+    Dia.attr(self, attrs)
   end
 end

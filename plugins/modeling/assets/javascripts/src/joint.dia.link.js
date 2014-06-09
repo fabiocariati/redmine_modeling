@@ -430,6 +430,7 @@ joint.dia.LinkView = joint.dia.CellView.extend({
 
             this._labelCache[idx].attr('transform', 'translate(' + labelCoordinates.x + ', ' + labelCoordinates.y + ')');
 
+
         }, this);
 
         return this;

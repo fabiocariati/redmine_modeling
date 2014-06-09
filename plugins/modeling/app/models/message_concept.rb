@@ -1,6 +1,6 @@
 class MessageConcept < ActiveRecord::Base
   unloadable
-  include Concept
+  include Dia
 
   belongs_to :use_case_diagram
 

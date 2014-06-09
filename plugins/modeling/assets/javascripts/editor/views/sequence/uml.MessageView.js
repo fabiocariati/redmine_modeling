@@ -3,13 +3,21 @@ uml.MessageView = joint.dia.LinkView.extend({
     initialize: function() {
         joint.dia.LinkView.prototype.initialize.apply(this, arguments);
 
+        _.bindAll(this, 'updateName');
+
         this.vTextFocus = V(effects.textFocus());
         this.$input = $(tools.inputText);
 
         this.model.on({
-           'change': this.update
+           'change': this.update,
+           'change:name': this.updateName
         })
 
+    },
+
+    updateName: function() {
+        this.$('text').remove();
+        this.renderLabel();
     },
 
     render: function() {
@@ -206,7 +214,7 @@ uml.MessageView = joint.dia.LinkView.extend({
             })
             .on('focusout keypress', function(e) {
                 if (e.keyCode == 13 || e.type != 'keypress') { //enter press
-                    self.setText($(this).val(), 0,  pos)
+                    self.model.set("name", $(this).val())
                     self.$input.remove();
                 }
             });
@@ -228,13 +236,14 @@ uml.MessageView = joint.dia.LinkView.extend({
     },
 
     pointerdown: function() {
-
+        joint.dia.LinkView.prototype.pointerdown.apply(this, arguments);
     },
 
     pointerup: function(evt, x, y) {
         if(evt.target.tagName == 'text') {
-            log(this.paper)
             this.renderTextFocus(evt.target)
+        } else {
+            joint.dia.LinkView.prototype.pointerup.apply(this, arguments);
         }
     }
 

@@ -1,5 +1,6 @@
 class SpecificationsController < ApplicationController
   unloadable
+  #before_filter :authorize
 
   def index
     @project = Project.find(params[:project_id])

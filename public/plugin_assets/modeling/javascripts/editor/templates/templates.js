@@ -122,17 +122,19 @@ templates = {
                     '</select>' +
                 '</p>' +
                 '<p>Name: <input name="name" style="width: 300px; float: right;" value="<%= graph.name %>" /></p>' +
-                '<div style="border: 1px solid darkgray; padding: 2px;">' +
-                    '<div style="text-align: center;">GIT (SSH)</div>' +
-                    '<p style="margin-top: 3px;">Repository Type:' +
-                        '<select name="repository_type">' +
-                            '<% _.each(repository_types, function(type) { %>' +
-                            '<option value="<%= type %>"><%= type %></option>graph.name' +
-                            '<% }); %>' +
-                        '</select>' +
-                        'Path: <input name="repository_path" style="width: 135px; float: right;" value="<%= repository_path %>" />' +
-                    '</p>' +
-                '</div>' +
+                '<% if(true) { %>' +
+                    '<div style="border: 1px solid darkgray; padding: 2px;">' +
+                        '<div style="text-align: center;">GIT (SSH)</div>' +
+                        '<p style="margin-top: 3px;">Repository Type:' +
+                            '<select name="repository_type">' +
+                                '<% _.each(repository_types, function(type) { %>' +
+                                '<option value="<%= type %>"><%= type %></option>graph.name' +
+                                '<% }); %>' +
+                            '</select>' +
+                            'Path: <input name="repository_path" style="width: 135px; float: right;" value="<%= repository_path %>" />' +
+                        '</p>' +
+                    '</div>' +
+                '<% } %>' +
                 '<div style="float: right">' +
                     '<a href="#" id="save_diagram_buttom" class="btn btn-primary">Save</a>' +
                 '</div>' +
@@ -167,6 +169,16 @@ templates = {
         basic_tools: _.template(
             '<a class="btn btn-default btn-sm dialog-link" href="#<%= editUrl %>"><%= dia.getIcon("fa-wrench") %></a>' +
             '<a style="margin-left: 2px;" class="btn btn-danger btn-sm"><%= dia.getIcon("fa-trash-o fa-inverse") %></a>' 
+        )
+    },
+    Link: {
+        markup: _.template(
+            '<path class="connection" stroke="black"/>' +
+            '<path class="marker-source" fill="black" stroke="black" />' +
+            '<path class="marker-target" fill="black" stroke="black" />' +
+            '<path class="connection-wrap"/>' +
+            '<g class="labels" />' +
+            '<g class="link-tools" />' 
         )
     },
     Action: {

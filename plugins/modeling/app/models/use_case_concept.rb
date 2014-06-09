@@ -1,11 +1,11 @@
 class UseCaseConcept < ActiveRecord::Base
   unloadable
-  include Concept
+  include Dia
 
   belongs_to :use_case_diagram
 
   def attrs
-    Concept.attributes(self, 'uml.UseCase')
+    Dia.attributes(self, 'uml.UseCase')
   end
 
   def childs
@@ -13,10 +13,10 @@ class UseCaseConcept < ActiveRecord::Base
   end
 
   def save_childs(cell)
-    Concept.save_childs(self, {}, cell)
+    Dia.save_childs(self, {}, cell)
   end
 
   def attrs_filter(attrs)
-    Concept.attr(self, attrs)
+    Dia.attr(self, attrs)
   end
 end

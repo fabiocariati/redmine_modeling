@@ -6,6 +6,6 @@ Redmine::Plugin.register :modeling do
   url 'http://example.com/path/to/plugin'
   author_url 'http://example.com/about'
 
-  permission :specifications, { :specifications => [:index, :create] }, :public => true
+  permission :specifications, { :specifications => [:index, :create] }, :public => false
   menu :project_menu, :specifications, { :controller => 'specifications', :action => 'index' }, :caption => 'Modeling', :after => :activity, :param => :project_id
 end

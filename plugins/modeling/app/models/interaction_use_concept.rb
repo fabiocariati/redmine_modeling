@@ -1,11 +1,11 @@
 class InteractionUseConcept < ActiveRecord::Base
   unloadable
-  include Concept
+  include Dia
 
   belongs_to :concept_model
 
   def attrs
-    Concept.attributes(self, 'uml.InteractionUse')
+    Dia.attributes(self, 'uml.InteractionUse')
   end
 
   def childs
@@ -13,10 +13,10 @@ class InteractionUseConcept < ActiveRecord::Base
   end
 
   def save_childs(cell)
-    Concept.save_childs(self, {}, cell)
+    Dia.save_childs(self, {}, cell)
   end
 
   def attrs_filter(attrs)
-    Concept.attr(self, attrs)
+    Dia.attr(self, attrs)
   end
 end

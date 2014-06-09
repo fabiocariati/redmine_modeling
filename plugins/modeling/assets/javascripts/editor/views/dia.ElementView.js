@@ -112,7 +112,7 @@ dia.ElementView = joint.dia.ElementView.extend({
             });
 
         $('svg').bind('click touchend', function(e) {
-            var notAddTool = $(e.target).closest('g').attr('class') != 'add-icon';
+                var notAddTool = $(e.target).closest('g').attr('class') != 'add-icon';
             if(notAddTool) self.$input.remove();
         });
 
