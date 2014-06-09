@@ -90,7 +90,7 @@ dia.Editor = Backbone.View.extend({
                 name: $div.find("input[name='name']")[0].value,
                 repository: $div.find("input[name='repository']")[0].value,
                 repository_user: $div.find("input[name='repository_user']")[0].value,
-                project_id: 1
+                project_id: dia.project_id
             })
 
             specification.save(null, {

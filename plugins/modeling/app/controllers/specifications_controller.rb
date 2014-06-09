@@ -40,10 +40,13 @@ class SpecificationsController < ApplicationController
   end
 
   def create
+    logger.info "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj"
+    logger.info params
     params.delete(:graphs)
     params.delete(:authenticity_token)
     params.delete(:action)
     params.delete(:controller)
+
 
     @specification = (params['type'] + 'Specification').constantize.create(params)
 

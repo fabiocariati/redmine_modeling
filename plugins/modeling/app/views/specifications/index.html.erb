@@ -109,8 +109,7 @@
         dia.start();
 
         var specs = <%= @specifications.to_json.html_safe -%>;
-        console.log("specs: ")
-        console.log(specs)
+        dia.project_id = <%= @project.id.to_s -%>;
 
         specs.push({
             id: 'specification_example',
