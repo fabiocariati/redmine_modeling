@@ -109,6 +109,9 @@
         dia.start();
 
         var specs = <%= @specifications.to_json.html_safe -%>;
+        console.log("specs: ")
+        console.log(specs)
+
         specs.push({
             id: 'specification_example',
             type: 'ObjectOriented',
