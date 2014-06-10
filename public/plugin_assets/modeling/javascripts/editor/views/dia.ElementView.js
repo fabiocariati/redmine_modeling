@@ -265,12 +265,12 @@ dia.ElementView = joint.dia.ElementView.extend({
     pointerdown: function(evt, x, y) {
         // Todo: melhorar
         // Isso é feito para contornar o problema de não atribuir link a um target que está toFront
-//        var self = this;
+        var self = this;
 //        if(!this.pointerMoving) {
-//            _.each(this.paper.model.getElements(), function(el) {
-//                if(el.id != self.model.id) el.toBack();
-//            })
-//            this.model.toFront();
+            _.each(this.paper.model.getElements(), function(el) {
+                if(el.id != self.model.id) el.toBack();
+            })
+            this.model.toFront();
 //        }
         // Fim todo
 

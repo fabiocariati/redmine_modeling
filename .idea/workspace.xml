@@ -12,7 +12,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/redmine-2.5.1@Development__redmine_2_5_1.coverage" NAME="Development: redmine-2.5.1 Coverage Results" MODIFIED="1402368308242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="redmine-2.5.1" />
+    <SUITE FILE_PATH="coverage/redmine-2.5.1@Development__redmine_2_5_1.coverage" NAME="Development: redmine-2.5.1 Coverage Results" MODIFIED="1402369599674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="redmine-2.5.1" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -29,116 +29,16 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="0" selection-start="1526" selection-end="2972" vertical-scroll-proportion="0.3452055" vertical-offset="828" max-vertical-offset="2250">
+            <state line="68" column="49" selection-start="1917" selection-end="1917" vertical-scroll-proportion="-0.26225165" vertical-offset="1422" max-vertical-offset="2250">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uml.MessageView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/sequence/uml.MessageView.js">
+      <file leaf-file-name="dia.ElementView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.ElementView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="200" column="44" selection-start="7358" selection-end="7358" vertical-scroll-proportion="-16.333334" vertical-offset="3110" max-vertical-offset="4626">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uml.LifelineView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/sequence/uml.LifelineView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="38" selection-start="4064" selection-end="4064" vertical-scroll-proportion="0.0" vertical-offset="1566" max-vertical-offset="2502">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uml.SequenceDiagramToolbarView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/sequence/uml.SequenceDiagramToolbarView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="22" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="icons.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/templates/lib/icons.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="196" column="59" selection-start="8184" selection-end="8184" vertical-scroll-proportion="0.0" vertical-offset="3153" max-vertical-offset="3870">
-              <folding>
-                <marker date="1402368143679" expanded="false" signature="453:464" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="1043:1052" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="1758:1782" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="1846:1870" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="1935:1959" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="2101:2135" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="2285:2313" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="2490:2544" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="2711:2739" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="2926:2954" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="3236:3274" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="3749:3776" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="3840:3867" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="3932:3959" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="4023:4050" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="4192:4232" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="4757:4800" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="4862:4919" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="5224:5251" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="5315:5342" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="5407:5434" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="5498:5525" placeholder="..." />
-                <marker date="1402368143679" expanded="true" signature="5591:5647" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="5943:5999" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="6528:6568" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="6880:6918" placeholder="..." />
-                <marker date="1402368143679" expanded="false" signature="7055:7093" placeholder="..." />
-                <marker date="1402368143679" expanded="true" signature="8612:8668" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sequence.jst.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/templates/sequence.jst.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="461" selection-end="715" vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="1512">
-              <folding>
-                <element signature="n#style#0;n#rect#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#line#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#g#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#line#0;n#g#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#line#1;n#g#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20140610022829_add.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/modeling/db/migrate/20140610022829_add.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="joint.dia.paper.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/src/joint.dia.paper.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="271" column="0" selection-start="8672" selection-end="8672" vertical-scroll-proportion="0.0" vertical-offset="4537" max-vertical-offset="7128">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dia.Paper.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.Paper.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="62" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4464">
+            <state line="269" column="0" selection-start="8906" selection-end="9076" vertical-scroll-proportion="0.0" vertical-offset="4464" max-vertical-offset="5328">
               <folding />
             </state>
           </provider>
@@ -167,7 +67,6 @@
         <option value="$PROJECT_DIR$/plugins/modeling/app/models/class_concept.rb" />
         <option value="$PROJECT_DIR$/plugins/modeling/app/models/concept.rb" />
         <option value="$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/models/dia.Specification.js" />
-        <option value="$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.ElementView.js" />
         <option value="$PROJECT_DIR$/plugins/modeling/app/controllers/specifications_controller.rb" />
         <option value="$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.Editor.js" />
         <option value="$PROJECT_DIR$/plugins/modeling/app/views/specifications/index.html.erb" />
@@ -179,6 +78,7 @@
         <option value="$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/sequence/uml.SequenceDiagramToolbarView.js" />
         <option value="$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/templates/lib/icons.js" />
         <option value="$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/sequence/uml.LifelineView.js" />
+        <option value="$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.ElementView.js" />
         <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
@@ -381,44 +281,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redmine-2.5.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modeling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="editor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sequence" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -688,7 +550,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/class/uml.ClassView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.1933775" vertical-offset="901" max-vertical-offset="1656" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.1933775" vertical-offset="901" max-vertical-offset="1656">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/usecase/uml.UseCaseView.js">
@@ -833,13 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.ElementView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="26" selection-start="3938" selection-end="3941" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5328">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.LinkView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="0" selection-start="402" selection-end="661" vertical-scroll-proportion="0.0" vertical-offset="1080" max-vertical-offset="2970" />
@@ -873,36 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.Editor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="32" selection-start="3602" selection-end="3602" vertical-scroll-proportion="0.0" vertical-offset="1026" max-vertical-offset="4842">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/sequence/uml.MessageView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="44" selection-start="7358" selection-end="7358" vertical-scroll-proportion="-16.333334" vertical-offset="3110" max-vertical-offset="4626">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.Paper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="62" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4464">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/src/joint.dia.paper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="271" column="0" selection-start="8672" selection-end="8672" vertical-scroll-proportion="0.0" vertical-offset="4537" max-vertical-offset="7128">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/011_add_news_comments_count.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="730">
@@ -931,16 +758,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.Paper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="62" selection-start="231" selection-end="231" vertical-scroll-proportion="-4.942466" vertical-offset="3734" max-vertical-offset="4464">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/src/joint.dia.paper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="271" column="0" selection-start="8672" selection-end="8672" vertical-scroll-proportion="0.4671233" vertical-offset="4537" max-vertical-offset="7128">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/db/migrate/20140610022829_add.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
+        <state line="5" column="0" selection-start="114" selection-end="114" vertical-scroll-proportion="0.119205296" vertical-offset="0" max-vertical-offset="755">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/templates/sequence.jst.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="461" selection-end="715" vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="1512">
+        <state line="6" column="0" selection-start="461" selection-end="715" vertical-scroll-proportion="0.14835165" vertical-offset="0" max-vertical-offset="1512">
           <folding>
             <element signature="n#style#0;n#rect#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#line#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -953,57 +796,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/templates/lib/icons.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="196" column="59" selection-start="8184" selection-end="8184" vertical-scroll-proportion="0.0" vertical-offset="3153" max-vertical-offset="3870">
+        <state line="196" column="59" selection-start="8184" selection-end="8184" vertical-scroll-proportion="0.53908354" vertical-offset="3128" max-vertical-offset="3870">
           <folding>
-            <marker date="1402368143679" expanded="false" signature="453:464" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="1043:1052" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="1758:1782" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="1846:1870" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="1935:1959" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="2101:2135" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="2285:2313" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="2490:2544" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="2711:2739" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="2926:2954" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="3236:3274" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="3749:3776" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="3840:3867" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="3932:3959" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="4023:4050" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="4192:4232" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="4757:4800" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="4862:4919" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="5224:5251" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="5315:5342" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="5407:5434" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="5498:5525" placeholder="..." />
-            <marker date="1402368143679" expanded="true" signature="5591:5647" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="5943:5999" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="6528:6568" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="6880:6918" placeholder="..." />
-            <marker date="1402368143679" expanded="false" signature="7055:7093" placeholder="..." />
-            <marker date="1402368143679" expanded="true" signature="8612:8668" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1402368143679" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/sequence/uml.SequenceDiagramToolbarView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="22" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864">
+        <state line="11" column="22" selection-start="473" selection-end="473" vertical-scroll-proportion="0.26225165" vertical-offset="0" max-vertical-offset="864">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/sequence/uml.LifelineView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="38" selection-start="4064" selection-end="4064" vertical-scroll-proportion="0.0" vertical-offset="1566" max-vertical-offset="2502">
+        <state line="117" column="38" selection-start="4064" selection-end="4064" vertical-scroll-proportion="0.7152318" vertical-offset="1566" max-vertical-offset="2502">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/sequence/uml.MessageView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="200" column="44" selection-start="7358" selection-end="7358" vertical-scroll-proportion="0.68820226" vertical-offset="3110" max-vertical-offset="4626">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.Editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="32" selection-start="3602" selection-end="3602" vertical-scroll-proportion="0.8344371" vertical-offset="1026" max-vertical-offset="4842">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/modeling/assets/javascripts/editor/views/dia.ElementView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="269" column="0" selection-start="8906" selection-end="9076" vertical-scroll-proportion="0.0" vertical-offset="4464" max-vertical-offset="5328">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="0" selection-start="1526" selection-end="2972" vertical-scroll-proportion="0.3452055" vertical-offset="828" max-vertical-offset="2250">
+        <state line="68" column="49" selection-start="1917" selection-end="1917" vertical-scroll-proportion="-0.26225165" vertical-offset="1422" max-vertical-offset="2250">
           <folding />
         </state>
       </provider>
