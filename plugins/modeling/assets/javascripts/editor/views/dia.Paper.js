@@ -5,7 +5,7 @@ dia.Paper = joint.dia.Paper.extend({
 
         this.tool = 'dragger';
 
-        _.bindAll(this, 'findViewByModel'); // Para corrigir erro do joint
+        _.bindAll(this, 'findViewByModel', 'findViewsFromPoint'); // Para corrigir erro do joint
 
         this.scale_size = 1;
 

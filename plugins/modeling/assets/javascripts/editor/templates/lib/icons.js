@@ -192,6 +192,15 @@ icons = {
         '<g transform="translate(10,10)">' +
             '<circle r="7" stroke="black" stroke-width="1.5" fill="white"/>' +
         '</g>'
+    ),
+
+    stopline: toolbarIcon('Stop', 'stopline-icon selectable',
+        '<g transform="translate(4,8) scale(.025)">' +
+            '<polygon id="x-mark-icon" points="438.393,374.595 319.757,255.977 438.378,137.348 374.595,73.607 255.995,192.225 137.375,73.622 73.607,137.352 192.246,255.983 73.622,374.625 137.352,438.393 256.002,319.734 374.652,438.378 "></polygon>' +
+         '</g>' +
+         '<g transform="scale(.20   )">' +
+            '<line x1="50" y1="10" x2="50" y2="50" style="stroke-dasharray: 10, 5; stroke: black; stroke-width: 5;"/>' +
+         '</g>'
     )
 
 

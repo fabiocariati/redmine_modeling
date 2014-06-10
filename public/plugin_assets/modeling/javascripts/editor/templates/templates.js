@@ -281,7 +281,11 @@ templates = {
             '<rect class="main-reference" width="70" height="35" style="stroke-width:1; stroke:black; fill: white" />' +
             '<text class="uml-lifeline-name" />' +
             '<path class="connection-wrap" d="M 35 <%= lineY %> 35 <%= lineY + 260 %>" />' +
-            '<line class="lifeline" y1="<%= lineY %>" y2="<%= lineY + 260 %>" style="stroke-dasharray: 10, 5; stroke: black; stroke-width: 1;"/>' 
+            '<line class="lifeline" y1="<%= lineY %>" y2="<%= lineY + 260 %>" style="stroke-dasharray: 10, 5; stroke: black; stroke-width: 1;"/>' +
+            '<g class="stopline" style="display:none">' +
+                '<line y1="295" y2="315" x1="31" x2="57" style="stroke: black; stroke-width: 1;"  />' +
+                '<line y1="315" y2="295" x1="31" x2="57" style="stroke: black; stroke-width: 1;"  />' +
+            '</g>' 
         )
     },
     ActorLifeline: {

@@ -2,7 +2,7 @@ uml.SequenceDiagramToolbarView = dia.ToolbarView.extend({
     initialize: function() {
         dia.ToolbarView.prototype.initialize.apply(this, arguments);
 
-        this.icons = _.union(this.icons, ['lifeline', 'actorlifeline', 'message', 'combinedfragment', 'interactionuse'], this.aftericons);
+        this.icons = _.union(this.icons, ['lifeline', 'actorlifeline', 'message', 'combinedfragment', 'interactionuse', 'stopline'], this.aftericons);
     },
 
     lifeline: function() {
@@ -34,6 +34,10 @@ uml.SequenceDiagramToolbarView = dia.ToolbarView.extend({
 
     interactionuse: function() {
         this.paper.tool = 'uml.InteractionUse';
+    },
+
+    stopline: function() {
+        this.paper.tool = 'stopline';
     }
 
 });

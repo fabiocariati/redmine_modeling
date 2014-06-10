@@ -11,6 +11,10 @@ uml.LifelineView = dia.ElementView.extend({
             self.updateSize();
             self.trigger('change:attrs');
         });
+
+        this.model.on('change:stopline', function() {
+            self.updateStopLine();
+        });
     },
 
     render: function() {
@@ -27,12 +31,25 @@ uml.LifelineView = dia.ElementView.extend({
         }
 
         this.update();
+        this.updateStopLine();
         this.resize();
         this.translate();
 
         this.updateSize();
 
         return this;
+    },
+
+    update: function() {
+        dia.ElementView.prototype.update.apply(this, arguments);
+    },
+
+    updateStopLine: function() {
+        if(this.model.get("stopline") == true) {
+            this.$(".stopline").show();
+        } else {
+            this.$(".stopline").hide();
+        }
     },
 
     updateSize: function() {
@@ -72,7 +89,8 @@ uml.LifelineView = dia.ElementView.extend({
             dia.ElementView.prototype.pointerup.apply(this, arguments);
         } else if(this.paper.isToolLink()) {
             var target = this.paper.findViewsFromPoint({x:x, y:y})[0];
-            if(target && target.model) {
+            if(target && target.model.get("type") ==  'uml.Lifeline') {
+                log(target.model.get("type"))
                 var message = new uml.Message({
                     source: { id: this.model.id },
                     target: { id: target.model.id },
@@ -92,6 +110,8 @@ uml.LifelineView = dia.ElementView.extend({
                 this.paper.model.addCell(message);
             }
             this.paper.removeVirtualTools();
+        } else if( this.paper.tool == 'stopline') {
+            this.model.set("stopline", true);
         }
     },
 
