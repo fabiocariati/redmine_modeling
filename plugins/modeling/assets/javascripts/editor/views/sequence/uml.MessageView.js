@@ -2,7 +2,7 @@ uml.MessageView = joint.dia.LinkView.extend({
 
     initialize: function() {
         joint.dia.LinkView.prototype.initialize.apply(this, arguments);
-
+        var self = this;
         _.bindAll(this, 'updateName');
 
         this.vTextFocus = V(effects.textFocus());
@@ -13,6 +13,31 @@ uml.MessageView = joint.dia.LinkView.extend({
            'change:name': this.updateName
         })
 
+        this.model.on('change:base', function() {
+            var diagrams = _.filter(self.paper.options.specification.get("graphs").models, function(model){return model.get("type") == "ClassDiagram"});
+            var cells = _.map(diagrams, function(diagram){return diagram.get("cells").models});
+            var classes = _.filter(_.flatten(cells), function(cell){return cell.get("type") == "uml.Class" });
+//
+            var el = _.find(self.model.collection.models, function(el){return el.id == self.model.get("target").id});
+            var baseClass = _.find(classes, function(c) { return c.id == el.get("base") });
+            var method = _.find(baseClass.get("methods"), function(c) { return String(c.id) == String(self.model.get("base")) });
+            self.model.set("name", method.name)
+
+            baseClass.on('change:methods', function(){
+                var method = _.find(this.get("methods"), function(c) { return String(c.id) == String(self.model.get("base")) });
+                self.model.set("name", method.name)
+            })
+        });
+
+    },
+
+    renderTools: function() {
+        joint.dia.LinkView.prototype.renderTools.apply(this, arguments);
+        var self = this
+        this.$(".tool-method").click(function(){
+            dia.app.current_element = self.model;
+            dia.app.navigate("edit_method_base", {trigger: true});
+        })
     },
 
     updateName: function() {
@@ -217,7 +242,7 @@ uml.MessageView = joint.dia.LinkView.extend({
                     self.model.set("name", $(this).val())
                     self.$input.remove();
                 }
-            });
+            });D
 
         $('svg').bind('click touchend', function(e) {
             var notAddTool = $(e.target).closest('g').attr('class') != 'add-icon';
@@ -235,12 +260,15 @@ uml.MessageView = joint.dia.LinkView.extend({
         }
     },
 
-    pointerdown: function() {
-        joint.dia.LinkView.prototype.pointerdown.apply(this, arguments);
+    pointerdown: function(evt, x, y) {
+        if(this.paper.tool == uml.Message) {
+            log("foiiiiiiiiiiiiiiiiiiii")
+        }
+//        joint.dia.LinkView.prototype.pointerdown.apply(this, arguments);
     },
 
     pointerup: function(evt, x, y) {
-        if(evt.target.tagName == 'text') {
+        if(evt.target.tagName == 'text' && $(evt.target).attr("class") != "text-icon") {
             this.renderTextFocus(evt.target)
         } else {
             joint.dia.LinkView.prototype.pointerup.apply(this, arguments);

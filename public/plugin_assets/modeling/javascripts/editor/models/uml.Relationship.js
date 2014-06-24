@@ -81,10 +81,10 @@ uml.Include = dia.Link.extend({
         type: 'uml.Include',
         attrs: {
             '.marker-target': { d: 'M 10 0 L 0 5 L 10 10 z', fill: '#34495e', stroke: '#2c3e50' },
-            '.connection': { stroke: '#2c3e50' }
+            '.connection': { stroke: '#2c3e50', 'stroke-dasharray': '5 2' }
         },
         labels: [
-            { position: .5, attrs: { text: { text: 'Include' } } }
+            { position: .5, attrs: { text: { text: '<<include>>' } } }
         ]
     }
 });
@@ -94,10 +94,10 @@ uml.Extends = dia.Link.extend({
         type: 'uml.Extends',
         attrs: {
             '.marker-target': { d: 'M 10 0 L 0 5 L 10 10 z', fill: '#34495e', stroke: '#2c3e50' },
-            '.connection': { stroke: '#2c3e50' }
+            '.connection': { stroke: '#2c3e50', 'stroke-dasharray': '5 2' }
         },
         labels: [
-            { position: .5, attrs: { text: { text: 'Extend' } } }
+            { position: .5, attrs: { text: { text: '<<extend>>' } } }
         ]
     }
 });
@@ -105,6 +105,21 @@ uml.Extends = dia.Link.extend({
 // Sequence Diagram
 
 uml.Message = dia.Link.extend({
+    toolMarkup: [
+        '<g class="link-tool">',
+            '<g class="tool-remove" event="remove">',
+                '<circle r="11" />',
+                '<path transform="scale(.8) translate(-16, -16)" d="M24.778,21.419 19.276,15.917 24.777,10.415 21.949,7.585 16.447,13.087 10.945,7.585 8.117,10.415 13.618,15.917 8.116,21.419 10.946,24.248 16.447,18.746 21.948,24.248z"/>',
+                '<title>Remove link.</title>',
+            '</g>',
+            '<g class="tool-method" event="link:options">',
+                '<circle r="11" transform="translate(25)"/>',
+                '<text class="text-icon" x="18" y="5" style="fill:white;font-size: 16px;">M</text>',
+                '<title>Method</title>',
+            '</g>',
+        '</g>'
+    ].join(''),
+
     defaults: {
         type: 'uml.Message',
         subType: 'MessageConcept',

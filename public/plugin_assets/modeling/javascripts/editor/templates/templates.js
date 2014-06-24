@@ -111,7 +111,7 @@ templates = {
             '</div>' 
         ),
         edit_diagram: _.template(
-            '<div class="custom-modal-dialog" id="save_diagram">' +
+                '<div class="custom-modal-dialog" id="save_diagram">' +
                 '<a href="#" style="float: right;">X</a>' +
                 '<h3 style="text-align: center;">New Diagram</h3>' +
                 '<p>Type:' +
@@ -179,6 +179,30 @@ templates = {
             '<path class="connection-wrap"/>' +
             '<g class="labels" />' +
             '<g class="link-tools" />' 
+        )
+    },
+    BaseClass: {
+        edit: _.template(
+            '<div class="custom-modal-dialog">' +
+                '<p>Select Base Class</p>' +
+                '<div style="overflow: auto; width:365px; height:200px;">' +
+                    '<% _.each(classes, function(c){ %>' +
+                        '<a class="class-item" id="<%= c.id %>"><%= c.get("name") %></a><br>' +
+                    '<% }) %>' +
+                '</div>' +
+            '</div>' 
+        )
+    },
+    BaseMethod: {
+        edit: _.template(
+            '<div class="custom-modal-dialog">' +
+                '<p>Select Base Method</p>' +
+                '<div style="overflow: auto; width:365px; height:200px;">' +
+                    '<% _.each(methods, function(m){ %>' +
+                        '<a class="method-item" id="<%= m.id %>"><%= m.name %></a><br>' +
+                    '<% }) %>' +
+                '</div>' +
+            '</div>' 
         )
     },
     Action: {
@@ -273,7 +297,9 @@ templates = {
                     '</ul>' +
                 '</li>' +
             '</ul>' +
-            '<div class="custom-modal" aria-hidden="true"></div>' 
+            '<div class="general-modal custom-modal" aria-hidden="true"></div>' +
+            '<div class="edit-base-modal custom-modal" id="edit_base" aria-hidden="true"></div>' +
+            '<div class="edit-method-base-modal custom-modal" id="edit_method_base" aria-hidden="true"></div>' 
         )
     },
     Lifeline: {
@@ -285,6 +311,13 @@ templates = {
             '<g class="stopline" style="display:none">' +
                 '<line y1="295" y2="315" x1="31" x2="57" style="stroke: black; stroke-width: 1;"  />' +
                 '<line y1="315" y2="295" x1="31" x2="57" style="stroke: black; stroke-width: 1;"  />' +
+            '</g>' 
+        ),
+        tools: _.template(
+            '<g class="uml-lifeline-tools element-tools" transform="translate(<%= box.x %>, <%= box.y %>)">' +
+                '<%= rect_border %>' +
+                '<%= remove_icon %>' +
+                '<%= add_icon %>' +
             '</g>' 
         )
     },

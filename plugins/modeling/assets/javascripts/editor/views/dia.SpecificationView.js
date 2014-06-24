@@ -80,6 +80,7 @@ dia.SpecificationView = Backbone.View.extend({
             height: 800,
             model: graph,
             linkView: dia.LinkView,
+            specification: this.model,
             toolbarView: window[module][type + 'ToolbarView']
         });
 

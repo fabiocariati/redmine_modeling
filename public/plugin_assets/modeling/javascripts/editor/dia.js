@@ -64,7 +64,7 @@ dia = {
     setDialogEventLink: function() {
         $("a.dialog-link").click(function() {
             var id = this.href.split("#")[1]
-            $(".custom-modal").attr("id", id)
+            $(".general-modal").attr("id", id)
             return true;
         });
     },

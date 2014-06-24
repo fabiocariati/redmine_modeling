@@ -21,12 +21,15 @@ dia.LinkView = joint.dia.LinkView.extend({
             log(evt.target)
             self.model.set("name", "newText")
         })
+        this.updateName();
     },
 
     updateName: function() {
-        this.model.set("labels",  [
-            { position: .5, attrs: { text: { text: this.model.get("name") } } }
-        ])
+        if(this.model.get("name")) {
+            this.model.set("labels",  [
+                { position: .5, attrs: { text: { text: this.model.get("name") } } }
+            ])
+        }
 //        this.$('text').remove();
 //        this.renderLabel();
     },

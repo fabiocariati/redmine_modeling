@@ -51,15 +51,15 @@ dia.Editor = Backbone.View.extend({
 
     showSpecificationsList: function() {
         var self = this;
-        $(".custom-modal").attr("id", "show_specifications")
+        $(".general-modal").attr("id", "show_specifications")
 
-        $(".custom-modal").html(dia.template('Specification', 'show', {
+        $(".general-modal").html(dia.template('Specification', 'show', {
             specifications: this.specifications.models
         }))
 
         dia.setDialogEventLink();
 
-        $(".custom-modal").find(".btn-danger").click(function(){
+        $(".general-modal").find(".btn-danger").click(function(){W
             var id = $(this).closest("tr").attr("specification");
             self.specifications.get(id).destroy({
                 success: function() {
@@ -74,9 +74,9 @@ dia.Editor = Backbone.View.extend({
 
     showNewSpecificationDialog: function(app) {
         var self = this;
-        $(".custom-modal").attr("id", "new_specification")
+        $(".general-modal").attr("id", "new_specification")
 
-        $(".custom-modal").html(dia.template('Specification', 'edit',
+        $(".general-modal").html(dia.template('Specification', 'edit',
             {
                 type: "New",
                 specification: { name: "", type: "", repository: "", repository_user: "" }
@@ -109,11 +109,11 @@ dia.Editor = Backbone.View.extend({
 
     showEditSpecificationDialog: function(app, id) {
         var self = this;
-        $(".custom-modal").attr("id", "edit_specification/" + id)
+        $(".general-modal").attr("id", "edit_specification/" + id)
 
         var specification = this.specifications.get(id);
 
-        $(".custom-modal").html(dia.template('Specification', 'edit',
+        $(".general-modal").html(dia.template('Specification', 'edit',
             {
                 type: "Edit",
                 specification:
@@ -151,8 +151,8 @@ dia.Editor = Backbone.View.extend({
 
     showNewDiagramDialog: function() {
         var self = this;
-        $(".custom-modal").attr("id", "new_diagram")
-        $(".custom-modal").html(dia.template('Specification', 'edit_diagram', {
+        $(".general-modal").attr("id", "new_diagram")
+        $(".general-modal").html(dia.template('Specification', 'edit_diagram', {
             specifications: this.specifications.models,
             graph: { name: "", type: "" },
             types: self.app.currentSpecification.get("concept_types"),
@@ -193,9 +193,9 @@ dia.Editor = Backbone.View.extend({
 
         var graph = self.app.currentSpecification.get("graphs").get(id);
 
-        $(".custom-modal").attr("id", "edit_diagram/" + id)
+        $(".general-modal").attr("id", "edit_diagram/" + id)
 
-        $(".custom-modal").html(dia.template('Specification', 'edit_diagram', {
+        $(".general-modal").html(dia.template('Specification', 'edit_diagram', {
             types: self.app.currentSpecification.get("concept_types"),
             specifications: this.specifications.models,
             graph: { name: graph.get("name"), type: graph.get("type") },

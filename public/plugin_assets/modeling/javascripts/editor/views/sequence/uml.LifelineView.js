@@ -15,6 +15,16 @@ uml.LifelineView = dia.ElementView.extend({
         this.model.on('change:stopline', function() {
             self.updateStopLine();
         });
+
+        this.model.on('change:base', function() {
+            log(self.paper)
+            var diagrams = _.filter(self.paper.options.specification.get("graphs").models, function(model){return model.get("type") == "ClassDiagram"})
+            var cells = _.map(diagrams, function(diagram){return diagram.get("cells").models})
+            var classes = _.filter(_.flatten(cells), function(cell){return cell.get("type") == "uml.Class" })
+
+            var baseClass = _.find(classes, function(c) { return c.id == self.model.get("base") })
+            self.model.set("name", baseClass.get("name"))
+        });
     },
 
     render: function() {
@@ -38,6 +48,27 @@ uml.LifelineView = dia.ElementView.extend({
         this.updateSize();
 
         return this;
+    },
+
+    renderTools: function() {
+        var self = this;
+        dia.app.current_element = this.model;
+
+        this.tools = {
+            add_icon:
+                '<g class="add-base-class" style="cursor: pointer" title="Set base class">' +
+                    '<circle stroke-width="1" stroke="black" cx="18" cy="-4" r="10" fill="white"></circle>' +
+//                    '<text style="font-size: 20; font-weight: bold" x="11" y="3">C</text>' +
+                    '<text style="font-size: 20; font-weight: bold" x="11" y="3">C</text>' +
+                '</g>'
+        }
+
+        dia.ElementView.prototype.renderTools.apply(this, arguments);
+//        dia.setDialogEventLink();
+
+        $('.add-base-class').click(function() {
+            dia.app.navigate("edit_base", {trigger: true});
+        });
     },
 
     update: function() {

@@ -8,6 +8,7 @@ class Link < ActiveRecord::Base
         concept_model_id: self.concept_model_id,
         source: {id: self.source.to_s},
         target: {id: self.target.to_s},
+        name: self.name,
         superType: 'Link',
         'id' => self.id
     }
@@ -16,6 +17,7 @@ class Link < ActiveRecord::Base
   def self.normalize_attrs(c)
     {
         link_type: c[:type],
+        name: c[:name],
         source: c[:source][:id],
         target: c[:target][:id],
     }
